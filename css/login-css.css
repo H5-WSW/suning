@@ -1,0 +1,22 @@
+.header {
+    width: 970px;
+    height: 100px;
+    margin: 0 auto;
+}
+.logo {
+    float: left;
+    width: 189px;
+    height: 100%;
+    background: url(../image/logo.png) center no-repeat;
+}
+#login .article .login-form .login-main-content .other-login dt:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 86px;
+    height: 1px;
+    background-color: #ddd
+}
+.active{
+    
+}

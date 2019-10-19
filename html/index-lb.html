@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图</title>
+</head>
+<body>
+    <style>
+        .index-lb-warp{
+            width: 100%;
+            height: 482px;
+        }
+
+        .lb-box {
+            width: 830px;
+            height: 482px;
+            position: relative;
+            margin-bottom: 10px;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            border: 0;
+            background: goldenrod;
+        }
+
+        img {
+            display: none;
+        }
+
+        .dotbox {
+            position: absolute;
+            bottom: 10px;
+            right: 0px;
+            z-index: 2;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            border: 0;
+        }
+
+        .dotbox span {
+            width: 21px;
+            height: 21px;
+            line-height: 21px;
+            border-radius: 50%;
+            background: #fff;
+            margin-right: 10px;
+            text-align: center;
+            color: #000;
+            font-family: "Microsoft Yahei";
+            font-size: 14px;
+            float: left;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .leftbtn {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            height: 60px;
+            width: 40px;
+            line-height: 60px;
+            text-align: center;
+            font-size: 26px;
+            background: rgba(100, 100, 100, 0.3);
+            color: #333;
+            transform: translateY(-50%);
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .rightbtn {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            height: 60px;
+            width: 40px;
+            line-height: 60px;
+            text-align: center;
+            font-size: 26px;
+            background: rgba(100, 100, 100, 0.5);
+            color: #333;
+            transform: translateY(-50%);
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .lb-active {
+            background: rgb(255, 156, 110) !important;
+            color: white !important;
+        }
+
+        .lb-cur {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="index-lb-warp">
+        <!-- <div class="lb-box">
+
+        </div> -->
+    </div>
+    <script>
+        // 调用ajax封装
+        ajax({
+            method: "post",
+            url: "../server/index-lb.php",
+            callback: function (xhr) {
+                console.log(JSON.parse(xhr.responseText));
+                var a = new Manager(JSON.parse(xhr.responseText));
+                a.init();
+            }
+        })
+        // 构造函数
+        class Manager {
+            constructor(data) {
+                this.data = data;
+                this.root = null;
+                this.oBtnL = null;
+                this.oBtnR = null;
+                this.oDots = null;
+                this.main = null;
+                this.index = 0;
+                this.timer = null;
+            }
+            init() {
+                this.setBox();
+                this.setBtn();
+                this.setDot();
+                this.cmain();
+                this.inset();
+                this.move();
+                this.addevent();
+                // console.log(this.oBox,this.oBtnL,this.oBtnR,this.oDots);
+
+            }
+            // 设置大框
+            setBox() {
+                this.root =;
+                this.Obox = document.createElement("div")
+                this.roOboxot.className = "lb-box";
+            }
+            // 设置左右箭头按钮
+            setBtn() {
+                this.oBtnL = document.createElement("span");
+                this.oBtnL.innerHTML = "<";
+                this.oBtnL.className = "leftbtn";
+                this.oBtnR = document.createElement("span");
+                this.oBtnR.innerHTML = ">";
+                this.oBtnR.className = "rightbtn";
+            }
+            // 设置小圆点部分----(div+内容（圆点数与lb图片数相同）+默认显示状态)
+            setDot() {
+                this.oDots = document.createElement("div");
+                this.oDots.className = "dotbox";
+                for (let i = 0; i < this.data.imgs.length; i++) {
+                    this.oDots.innerHTML += `
+                <span></span>`
+                }
+                this.oDots.querySelectorAll("span")[0].className = "lb-active";
+            }
+            // 设置图片内容-------(div+内容+默认显示状态)
+            cmain() {
+                this.main = document.createElement("div");
+                for (let i = 0; i < this.data.imgs.length; i++) {
+                    this.main.innerHTML += `
+                <img src="${this.data.imgs[i]}">
+                `
+                }
+                this.main.querySelectorAll("img")[0].className = "lb-cur";
+            }
+            // 插入页面并显示
+            inset() {
+                this.root.appendChild(this.oBtnL);
+                this.root.appendChild(this.oBtnR);
+                this.root.appendChild(this.oDots);
+                this.root.appendChild(this.main);
+                document.body.appendChild(this.root);
+            }
+            // 自动播放            事件一：（排它+临界点）
+            move() {
+                // 获取操作对象
+                let imgs = this.main.querySelectorAll("img"); /* 从main获取imgs */
+                let dots = this.oDots.querySelectorAll("span");
+                // 自动播放(根据索引按顺序循环显示图，加样式让其显示)
+                this.timer = setInterval(() => {
+                    console.log("自动轮播this.index=",this.index);
+                    /* 排它，清除 */
+                    this.clear();
+                    imgs[this.index].className = "lb-cur";
+                    dots[this.index].className = "lb-lb-active";
+                    this.index += 1;
+                    this.index > imgs.length - 1 ? this.index = 0 : this.index;
+                }, 1000)
+            }
+            clear() {
+                // 清除样式（循环）
+                let imgs = this.main.querySelectorAll("img");
+                let dots = this.oDots.querySelectorAll("span");
+                for (let i = 0; i < this.data.imgs.length; i++) {
+                    imgs[i].className = "";
+                    dots[i].className = "";
+                }
+            }
+            addevent() {
+                // 监听事件（鼠标点击左右箭头）
+                // 获取图+圆点标签
+                let imgs = this.main.querySelectorAll("img");
+                let dots = this.oDots.querySelectorAll("span");
+                // 右箭头点击事件(正序，索引+，清除所有样式，给当前添加样式)
+                this.oBtnR.onclick = () => {
+                    console.log("右箭头this.index=",this.index);
+                    this.index += 1;
+                    this.index > imgs.length - 1 ? this.index = 0 : this.index; /* * */
+                    this.clear();
+                    imgs[this.index].className = "lb-cur";
+                    dots[this.index].className = "lb-active";
+
+                }
+                // 左箭头
+                this.oBtnL.onclick = () => {
+                    console.log("左箭头this.index=",this.index);
+                    this.index -= 1;
+                    this.index < 0 ? this.index = imgs.length - 1 : this.index;
+                    this.clear();
+                    imgs[this.index].className = "lb-cur";
+                    dots[this.index].className = "lb-active";
+
+                }
+                // 鼠标移入清除自动播放
+                this.root.onmouseover = () => {
+                    clearInterval(this.timer)
+                }
+                // 鼠标移除继续播放
+                this.root.onmouseout = () => {
+                    this.move();
+                }
+                // 点击小圆点样式 事件四
+                for (let i = 0; i < imgs.length; i++) {
+                    /* 不能用i，因不能与外部index同步 */
+                    dots[i].onclick = () => {
+                        this.index = i;
+                        console.log("点击小圆点this.index=",this.index);
+                        this.clear();
+                        imgs[this.index].className = "lb-cur";
+                        dots[this.index].className = "lb-active";
+                    }
+                }
+            }
+        }
+
+
+        /* ajax封装函数 */
+        function ajax(msg) {
+            var xhr = new XMLHttpRequest();
+            var postdata = "";
+            if (msg.method.toUpperCase() != "POST") {
+                if (!data) {
+                    msg.url += "?" + Date.now()
+                } else {
+                    msg.url += "?"
+                    for (var k in msg.data) {
+                        msg.url += k + "=" + msg.data[k];
+                    }
+                }
+            } else {
+                for (var k in msg.data) {
+                    postdata += k + "=" + msg.data[k];
+                }
+            }
+            console.log(msg.url);
+            xhr.open(msg.method, msg.url)
+            if (msg.method.toUpperCase() == "POST") {
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            }
+            xhr.send(postdata)
+            xhr.onreadystatechange = function () {
+                if (xhr.status == 200) {
+                    clearTimeout(timer)
+                    if (xhr.readyState == 4) {
+                        if (msg.callback) msg.callback(xhr)
+                    }
+                } else {
+                    if (msg.err) msg.err(xhr)
+                }
+            }
+            var timer = setTimeout(function () {
+                xhr.abort()
+                alert("请求超时")
+                clearTimeout(timer)
+            }, 3000)
+        }
+    </script>
+</body>
+</html>

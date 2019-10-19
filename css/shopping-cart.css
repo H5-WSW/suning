@@ -1,0 +1,701 @@
+.cart-header {
+    min-width: 1190px;
+}
+
+.wrapper {
+    width: 1190px;
+    line-height: 27px;
+    margin: 0 auto;
+    clear: both;
+}
+
+.cart-top-pic {
+    padding-top: 15px;
+}
+
+.g-logo {
+    position: relative;
+    float: left;
+    width: 400px;
+    height: 100px;
+}
+
+.g-logo img {
+    margin-top: 20px;
+}
+
+.cart-search {
+    position: relative;
+    float: right;
+    width: 400px;
+    margin-top: 34px;
+    z-index: 999;
+}
+
+.cart-search .cart-search-box {
+    float: left;
+    width: 318px;
+    height: 28px;
+    border: 2px solid #f50;
+    border-right: 0 none;
+}
+
+.cart-search .cart-search-btn {
+    float: left;
+    width: 80px;
+    height: 32px;
+    line-height: 32px;
+    background: #f50;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Microsoft YaHei';
+    color: #fff;
+}
+
+.cart-search .cart-search-list {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 33px;
+    width: 318px;
+    max-height: 268px;
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    overflow: hidden;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.root1200 .effective-tips {
+    width: 1188px;
+}
+
+.effective-tip-cart1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.effective-tips {
+    position: relative;
+    width: 988px;
+    height: 36px;
+    margin: 19px auto 10px;
+    line-height: 36px;
+    text-align: center;
+    background: ivory;
+    border: 1px solid #fc6;
+}
+
+.hide {
+    display: none;
+}
+
+.effective-tips span {
+    font-family: "Microsoft Yahei";
+    color: red;
+    font-weight: 700;
+}
+
+.effective-tips {
+    position: relative;
+    width: 988px;
+    height: 36px;
+    margin: 19px auto 10px;
+    line-height: 36px;
+    text-align: center;
+    background: ivory;
+    border: 1px solid #fc6;
+}
+
+.effective-tips .cart1-tip-icon {
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-top: -30px;
+    *margin-top: 0;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+.effective-tips span {
+    font-family: "Microsoft Yahei";
+    color: red;
+    font-weight: 700;
+}
+
+.effective-tips .cart1-tip-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.effective-tips .cart1_title_tips a {
+    color: #F50;
+    font-weight: 100;
+    text-decoration: none;
+    display: inline-block;
+    width: auto;
+    max-width: 90%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.effective-tips .tips-close {
+    position: absolute;
+    top: 14px;
+    right: 11px;
+    width: 9px;
+    height: 9px;
+    background: url(images/lion-cart.png?v=c087885…) -137px -104px no-repeat;
+}
+
+.cart-header .head-delivery {
+    height: 34px;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+    *z-index: 2;
+}
+
+.cart-header .city-select {
+    float: left;
+    position: relative;
+    z-index: 30;
+}
+
+.cart-header .city-select .delivery-desc {
+    margin-right: 7px;
+    line-height: 26px;
+}
+
+.fl {
+    float: left;
+}
+
+.ui-city {
+    display: inline-block;
+    *dispplay: inline;
+    *zoom: 1;
+    font-size: 12px;
+    position: relative;
+    z-index: 0;
+}
+
+.ui-city a,
+.ui-city a:visited {
+    margin-left: 6px;
+    line-height: 14px;
+    color: #333;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.ui-city-toggle {
+    display: inline-block;
+    border: 1px solid #bbb;
+    padding: 6px 5px 6px 6px;
+    color: #000;
+    background: #fff;
+    position: relative;
+    z-index: 100;
+}
+
+.ui-city-toggle {
+    padding: 4px 5px 4px 6px !important;
+}
+
+.cart-header .login-tips {
+    line-height: 26px;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
+.cart-header .login-tips {
+    line-height: 26px;
+}
+
+.cart-header .login-tips a.login-btn {
+    display: inline-block;
+    height: 27px;
+    margin: 0 10px;
+    padding: 0 16px;
+    line-height: 27px;
+    font-size: 14px;
+}
+
+a.cart-btn {
+    width: 60px;
+    height: 27px;
+    margin: 0 8px;
+    line-height: 27px;
+    text-align: center;
+    background-color: #f60;
+    border-radius: 2px;
+    color: #FFF;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.cart-search .cart-search-btn {
+    float: left;
+    width: 80px;
+    height: 32px;
+    line-height: 32px;
+    background: #f50;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Microsoft YaHei';
+    color: #fff;
+}
+
+.cart-search .cart-search-box .search-icon {
+    float: left;
+    width: 13px;
+    height: 13px;
+    margin: 8px 0 0 11px;
+    background: url(../images/shop-lion-cart.png) -200px -70px no-repeat;
+}
+
+.cart-search .cart-search-box .cart-search-input {
+    float: left;
+    width: 285px;
+    height: 20px;
+    line-height: 20px;
+    padding: 4px 0;
+    margin-left: 9px;
+    border: 0;
+    background: #fff;
+}
+
+
+
+/* 购物车 */
+.cart-warp {
+    width: 100%;
+}
+
+.cart-warp .cart-box {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.cart {
+    width: 1190px;
+    margin: 0 auto;
+    /* border: 1px solid #ddd; */
+}
+
+/* （1）用户地址栏 */
+.cart-msm {
+    width: 1190px;
+    clear: both;
+    margin: 14px auto;
+    height: 32px;
+    line-height: 32px;
+    border: 1px solid #ddd;
+    border-top: 3px solid #ddd;
+}
+/* 按钮 */
+.cart-checkbox {
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin: 10px 10px 0;
+    overflow: hidden;
+}
+.th-chk-chkd{
+    width: 250px;
+}
+
+.cart-checkbox input, .cart-radio input {
+    display: block;
+    /* position: absolute;
+    top: -28px;
+    left: -38px; */
+    /* opacity: 0; */
+    border: 1px solid #ddd;
+}
+/* .cart-checkbox label {
+    width: 14px;
+    height: 14px;
+    position: relative;
+    z-index: 2;
+    float: left;
+    cursor: pointer;
+    overflow: hidden;
+    vertical-align: top;
+    background: url(../images/shoping-lion-cart.png) 0 -20px;
+} */
+/*  */
+.th{
+    float:left;
+}
+.th-item{
+    margin-left:  80px;
+}
+.th-price{
+    margin-left: 198px;
+}
+.th-amount{
+    margin-left: 60px;
+}
+.th-sum{
+    margin-left: 128px;
+}
+.th-op{
+    margin-left: 208px;
+}
+
+/* （2）购物车信息栏 */
+
+
+
+
+
+/* （3）购物车列表 */
+.cart li {
+    height: 80px;
+    position: relative;
+    padding: 15px 20px;
+    /* background: red; */
+    border-bottom: 1px solid #ddd;
+}
+.cart .cart-ipt {
+    border: 1px solid #333;
+    width: 16px;
+    height: 16px;
+    float: left;
+    position: relative;
+
+}
+
+.cart .cart-img {
+    margin: 0 30px;
+    position: relative;
+    width: 80px;
+    overflow: hidden;
+    float: left;
+}
+
+.cart .cart-des {
+    width: 300px;
+    margin-right: 50px;
+    float: left;
+    display: block;
+    margin-bottom: 2px;
+    max-height: 36px;
+    line-height: 18px;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.cart .cart-priceOne {
+    width: 106px;
+    text-align: right;
+    height: 80px;
+    float: left;
+}
+
+.cart .cart-num {
+    width: 58px;
+    margin: 0 50px;
+    position: relative;
+    text-align: center;
+    float: left;
+    border: 1px solid #ddd;
+}
+
+/* +- */
+.cart .num-dec {
+    width: 15px;
+    height: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.cart .num-add {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.cart .cart-sum {
+    width: 106px;
+    margin-right: 220px;
+    font-weight: bold;
+    text-align: right;
+    height: 80px;
+    float: left;
+}
+
+
+
+
+/* 3购物车底部合计总计+数量栏 */
+.cart-allAdd{
+    width: 1188px;
+    height: 58px;
+    margin-bottom: 30px;
+    line-height: 60px;
+    border: 1px solid #ddd;
+}
+/* 左边 */
+.cart-allAdd .cart-allAdd-l{
+    width: 700px;
+    height: 60px;
+    position: relative;
+    float: left;
+}
+/* 复选框 */
+.cart-allAdd-l .cart-checkbox {
+    display: block;
+    /* position: absolute;
+    top: 12px;
+    left: 0px; */
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin: 24px 10px 0;
+    overflow: hidden;
+}
+.cart-allAdd-l .th-chk-chkd{
+    width: 950px;
+    height: 60px;
+}
+
+/* .cart-allAdd-l .cart-checkbox label {
+    background: url(../images/shoping-lion-cart.png) 0 -20px;
+} */
+/* text */
+.allAdd-text1{
+    float: left;
+    margin-right: 30px;
+}
+.allAdd-text1:nth-of-type(2){
+    color: #999999;
+}
+/* 已选中 */
+.allAdd-text2{
+    float: left;
+    margin-left: 500px;
+    height: 60px;
+}
+
+/* 总价 */
+.allAdd-text4{
+    display: inline-block;
+    float: right;
+}
+
+.allAdd-color{
+    color: #f60;
+}
+/* .allAdd-color :nth-of-type(2){
+    font-size: ;
+} */
+
+
+
+
+
+/* 右边 */
+.cart-allAdd .cart-allAdd-r{
+    float: right;
+    width: 120px;
+    height: 60px;
+    line-height: 60px;
+    margin-top: -1px;
+    margin-right: -1px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #f60;
+}
+
+
+
+
+/* 猜你喜欢 */
+.cart-recommend {
+    margin-top: 30px;
+    width: 1190px;
+    margin: 0 auto;
+    font-size: 14px;
+    position: relative;
+}
+
+/* 头部 */
+.recommend-header {
+    height: 42px;
+}
+
+.recommend-header span {
+    display: inline-block;
+    width: 140px;
+    height: 41px;
+    line-height: 41px;
+    text-align: center;
+    /* background: red; */
+    font-weight: 700;
+    border: 1px solid #ddd;
+    border-bottom: 1px solid #ffffff;
+}
+
+/* list */
+.page-list {
+    height: 622px;
+    padding: 0 15px 0 25px;
+    border: 1px solid #ddd;
+}
+
+.page-list ul {
+    position: relative;
+    height: 612px;
+    margin-right: 2px;
+    overflow: hidden;
+    display: none;
+}
+
+.page-list .current {
+    display: block;
+}
+
+.page-list .item {
+    margin-right: 1px;
+    padding: 15px 23px 0;
+    position: relative;
+    float: left;
+    cursor: pointer;
+    width: 182px;
+    height: 287px;
+}
+
+/* 图 */
+
+.page-list .item img {
+    position: relative;
+    float: left;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+}
+
+/* 价格 */
+.page-list .item .price {
+    padding-top: 9px;
+    width: 180px;
+    height: 24px;
+    float: left;
+    line-height: 24px;
+    overflow: hidden;
+    color: #f60;
+}
+
+.page-list .item .price .price-style {
+    font-size: 18px;
+    color: #f60;
+    font-weight: bold;
+}
+
+/* 苏宁 */
+.page-list .item .title {
+    display: block;
+    font-size: 12px;
+    float: left;
+    height: 37px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.page-list .item .title:hover {
+    color: #f60;
+}
+
+.page-list .item .title .store-class {
+    padding: 2px 3px;
+    margin-right: 5px;
+    line-height: 16px;
+    border-radius: 2px;
+    background-color: #f60;
+    color: #fff;
+}
+
+
+/* 加入购物车 */
+
+.page-list .item .btn-db {
+    display: block;
+    width: 178px;
+    height: 32px;
+    float: left;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+
+.page-list .item .btn-db i {
+    display: inline-block;
+    width: 18px;
+    height: 19px;
+    vertical-align: middle;
+    margin-right: 7px;
+    margin-top: -3px;
+    background: url(../images/shop-lion-cart.png) -67px -226px no-repeat;
+}
+
+.page-list .item .btn-db:hover {
+    color: #f60;
+}
+
+/* 箭头 */
+.arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -45px;
+    width: 34px;
+    height: 88px;
+    border: 1px solid #ddd;
+}
+
+.arrow:nth-of-type(2) {
+    right: 0px;
+}
+
+.arrow .arrow-left {
+    position: absolute;
+    top: 34px;
+    width: 12px;
+    right: 11px;
+    height: 20px;
+    background: url(../images/shop-lion-cart.png) -79px -59px no-repeat;
+}
+
+.arrow .arrow-right {
+    position: absolute;
+    top: 34px;
+    width: 12px;
+    height: 20px;
+    right: 11px;
+    background: url(../images/shop-lion-cart.png) -93px -59px no-repeat;
+}

@@ -1,0 +1,326 @@
+/* <!-- top-adv --> */
+.topNav-adv {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: #327dfd;
+}
+
+.topNav-adv img {
+    width: 1190px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+#adv-close {
+    position: absolute;
+    top: 0px;
+    right: 45px;
+    width: 20px;
+    height: 20px;
+}
+
+/* <!-- 1 --> */
+.topNav-warp {
+    width: 100%;
+    background: #f5f5f5;
+    font-size: 12px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.topNav-toolbar {
+    width: 1190px;
+    height: 35px;
+    margin: 0 auto;
+    color: #666666;
+
+}
+
+/* list左 */
+.topNav-toolbar .top-left-list .top-left-fistList {
+    float: left;
+}
+
+ .top-left-fistList>li {
+    /* width: 48px; */
+    position: relative;
+    height: 35px;
+    padding: 0 10px;
+    line-height: 35px;
+    float: left;
+}
+
+/* .topNav-toolbar .top-left-list .actice-color:hover {
+    color: #f50;
+} */
+
+
+.topNav-toolbar .top-left-list .actice-color:hover div{
+    height: 120px;
+}
+.topNav-toolbar .top-left-list .actice-nav:hover .navigation{
+    height: 230px !important;
+}
+.topNav-toolbar .top-left-list .actice-nav:hover{
+    background: white;
+}
+.topNav-toolbar .top-left-list .actice-color:hover{
+    /* border: 1px solid #ccc; */
+    border-bottom: none;
+    z-index: 10;
+    background: white;
+}
+.topNav-toolbar .top-left-list .actice-color::after,.actice-nav::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    /* border-right: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee; */
+    display: none;
+}
+
+
+
+
+
+/* 左边list的二级 */
+.navigation{
+    position: absolute;
+    width: 400px;
+    height: 150px;
+    background: #ff6e07;
+    z-index: 1000;
+}
+.navigation div{
+    float: left;
+    width: 200px;
+    height: 180px;
+    /* border-right: 1px solid #dddddd; */
+    /* background: lightcoral; */
+}
+.navigation h3{
+    width: 100%;
+    float: left;
+    font-size: 14px;
+    color: #666666;
+}
+/* ul */
+.navigation .seclist-l{
+    width: 100px;
+    height: 140px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #999999;
+    /* float: left; */
+    background: lightseagreen;
+}
+
+/* 新增 */
+.navigation{
+    width: 1010px;
+    height: 0px;
+    position: absolute;
+    top: 35px;
+    left: -1px;
+    background: #fff;
+    /* border: 1px solid #ccc; */
+    overflow: hidden;
+    transition: 0.4s;
+}
+.box{
+    width: 160px;
+    height: 0px;
+    position: absolute;
+    top: 35px;
+    left: -1px;
+    background: #fff;
+    /* border: 1px solid #ccc; */
+    overflow: hidden;
+    transition: 0.4s;
+}
+.navigation div:nth-last-of-type(1){
+    border: none;
+}
+.navigation ul,.box ul{
+    padding-top:10px;
+    padding-left: 15px; 
+    box-sizing: border-box;
+    float:left;
+}
+.navigation h3{
+    margin-left: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.navigation div{
+    float: left;
+    margin-top: 15px;
+    width: 200px;
+    height: 200px;
+    border-right: 1px solid #ccc;
+}
+.navigation li{
+    line-height: 25px;
+}
+.box:after{
+    content:"";
+    display: block;
+    clear: both;
+
+}
+
+
+
+/* list右 */
+.topNav-toolbar .top-right-list {
+    float: right;
+}
+
+.topNav-toolbar .top-right-list li {
+    width: 48px;
+    height: 35px;
+    padding: 0 10px;
+    line-height: 35px;
+    float: left;
+}
+
+.topNav-toolbar .top-right-list span:hover {
+    color: #f50;
+}
+
+.topNav-toolbar .top-right-list .top-list-color {
+    color: #f50;
+}
+
+
+
+/* <!-- 2----logo栏 --> */
+.header-ng-warp {
+    width: 100%;
+    color: #ffffff;
+}
+
+.header-ng {
+    width: 1190px;
+    height: 110px;
+    margin: 0 auto;
+    /* background: #d35454; */
+}
+
+/* <!-- logo+img --> */
+.header-ng .ng-box {
+    float: left;
+}
+
+.ng-box .logo-set img {
+    widows: 110px;
+    height: 90px;
+    float: left;
+}
+
+/* .ng-box .ng-gif-logo{
+    widows: 110px;
+    height: 90px;
+} */
+
+
+
+
+
+/* <!-- 搜索栏 --> */
+.header-ng .ng-search-warp {
+    margin-left: 10px;
+    /* height: 60px; */
+    float: left;
+    margin-top: 30px;
+}
+
+.header-ng .ng-search {
+    width: 540px;
+    height: 40px;
+}
+
+/* --1--search */
+.header-ng .ng-search .search-box {
+    width: 418px;
+    height: 36px;
+    float: left;
+    border: 2px solid #FA0;
+    border-right: none;
+}
+
+.search-box i {
+    width: 28px;
+    height: 36px;
+    float: left;
+    background: #ffffff url(../images/20191017092949.png) no-repeat 4px 7px;
+}
+
+.search-box .search-keyword {
+    width: 380px;
+    height: 18px;
+    padding: 9px 10px 9px 0;
+
+    float: left;
+    line-height: 18px;
+    border: none;
+    background: #FFF;
+    color: #BBB;
+    font-size: 12px;
+}
+
+/* 搜索按钮 */
+.header-ng .ng-search .search-btn {
+    width: 120px;
+    height: 40px;
+    float: right;
+    font-size: 18px;
+    color: #FFF;
+    font-weight: bolder;
+    background-color: #FA0;
+}
+
+
+
+/* --2--list */
+.header-ng .search-list {
+    float: left;
+    width: 100%;
+    height: 18px;
+    color: #999999;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.header-ng .search-list li {
+    /* width: 55px; */
+    font-size: 10px;
+    color: #999999;
+    float: left;
+    /* padding: 0 5px; */
+}
+
+.header-ng .search-list li span {
+    padding: 0 10px 0 8px;
+}
+.header-ng .search-list a:hover{
+    color: #f60;
+}
+
+
+
+
+
+
+.topNav-toolbar .actice-nav .navigation .seclist-l {
+    width: 100px;
+    display: none;
+}
+
+.topNav-toolbar .actice-nav .navigation .seclist-l>li {
+    background-color: #ffffff;
+}

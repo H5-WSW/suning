@@ -1,0 +1,444 @@
+  * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  }
+
+  .phonelist-top-warp {
+      width: 1390px;
+      /* height: 100%; */
+      margin: 0 auto;
+  }
+
+  .phonelist-top {
+      height: 30px;
+      width: 100%;
+      font-size: 14px;
+      margin: 15px 0 9px;
+      /* background: red; */
+
+  }
+
+  .phonelist-top a {
+      float: left;
+      line-height: 30px;
+  }
+
+  .phonelist-top a:hover {
+      color: #f90;
+  }
+
+  .phonelist-top i {
+      float: left;
+      width: 5px;
+      height: 9px;
+      vertical-align: middle;
+      margin: 7px 10px 14px;
+  }
+
+  .phonelist-top dl {
+      height: 24px;
+      padding: 0 7px;
+      margin: 2px 8px;
+      text-align: center;
+      line-height: 24px;
+      float: left;
+      border: 1px solid #CCC;
+  }
+
+  .phonelist-top dl a {
+      line-height: 24px;
+  }
+
+  .phonelist-top dt {
+      float: left;
+  }
+
+  .phonelist-top em {
+      height: 18px;
+      padding: 0 4px;
+      margin: 4px 40px;
+      text-align: center;
+      line-height: 18px;
+      float: left;
+      font-size: 12px;
+      color: rgb(179, 176, 176);
+      border: 1px solid #CCC;
+      border-radius: 2px;
+  }
+
+  .phonelist-top em:hover {
+      color: #f90;
+      border-color: #f90;
+  }
+
+  /* <!-- 筛选列表 --> */
+  .search-wrap {
+      width: 100%;
+      height: 162px;
+      border-top: 1px solid #EEE;
+      border-bottom: 1px solid #EEE;
+  }
+
+  .list-classify {
+      width: 100%;
+      height: 40px;
+      float: left;
+      border-top: 1px dotted #eee;
+  }
+
+  .list-classify ul li {
+      float: left;
+      margin-right: 40px;
+      line-height: 40px;
+  }
+
+  .list-classify ul li:nth-of-type(1) {
+      width: 110px;
+      margin-right: 20px;
+      padding-left: 10px;
+      color: #999999;
+  }
+
+  .list-classify ul li input {
+      float: left;
+      margin: 14px 6px 0px;
+
+  }
+
+  /* 排序+手机列表*/
+  .phonelist-box {
+      width: 1390px;
+      /* height: 100%; */
+      background: #f90;
+      /* border: 1px solid #000; */
+      /* margin: 10px auto; */
+  }
+
+  /* 排序栏-左边 */
+  .phonelist-box .btn-ran {
+      margin-top: 10px;
+      width: 100%;
+      height: 38px;
+      background: #F8F8FA;
+  }
+
+  .btn-ran span {
+      float: left;
+      width: 90px;
+      height: 35px;
+      line-height: 35px;
+      display: inline-block;
+      text-align: center;
+  }
+  .interval-input{
+      display: inline-block;
+  }
+  .interval-input input {
+      float: left;
+      margin: 4px 10px;
+      box-sizing: content-box;
+      padding: 0 4px 0 14px;
+      line-height: 24px;
+      border: 1px solid #E5E5E5;
+      border-radius: 2px;
+      height: 24px;
+      width: 36px;
+      background: #FFF url(../images/phone-list.png) no-repeat -186px -126px;
+  }
+  
+  .interval-input i {
+      height: 35px;
+      line-height: 35px;
+      display: inline-block;
+      float: left;
+      margin: 0 6px;
+  }
+
+    /* 排序栏-右边 */
+    .btn-ran .btn-ran-r{
+        float: right;
+    }
+    .btn-ran .btn-ran-r li{
+        line-height: 35px;
+        margin-left:  20px;
+        float: left;
+    }
+    .btn-ran .btn-ran-r li:after{
+        content:"";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+    .btn-ran .btn-ran-r input{
+        
+        vertical-align: middle;
+    }
+
+
+  /* 列表 */
+  .box-list {
+      width: 100%;
+      height: 100%;
+  }
+
+  .item {
+      margin: 4px;
+      width: 240px;
+      height: 435px;
+      padding: 30px 15px 15px;
+      float: left;
+      /* background: chartreuse; */
+  }
+
+  .item:hover {
+      /* border: 1px solid red; */
+      box-shadow: 0px 0px 4px #b1afaf;
+      /* border: 1px solid #efefef; */
+  }
+
+  .item-box {
+      text-align: center
+  }
+
+  /* 数据图 */
+  .item img {
+      width: 240px;
+      height: 240px;
+  }
+
+  /* 价格 */
+  .price {
+      text-align: left;
+      margin-left: 10px;
+      color: #F60;
+      font-size: 22px;
+      font-weight: bolder;
+  }
+
+  .price .price-icon {
+      text-align: left;
+      font-size: 12px;
+      font-weight: normal;
+  }
+
+  /* 商品名 */
+  .title {
+      height: 40px;
+      line-height: 20px;
+      vertical-align: top;
+      overflow: hidden;
+      margin: 8px 0;
+      color: #666;
+      font-size: 14px;
+      word-break: break-all;
+  }
+
+  /* 商品评价 */
+  .dis {
+      padding: 3px 0;
+      font-weight: bolder;
+      text-align: left;
+      /* margin-left: 10px; */
+      color: #2272c8;
+      font-size: 10px;
+  }
+
+  /* 苏宁自营 */
+  .store-stock {
+      width: 56px;
+      height: 16px;
+      margin-top: 8px;
+      color: #f60;
+      text-align: center;
+      line-height: 16px;
+      border: 1px solid #f60;
+      border-radius: 2px;
+  }
+
+  .storeName {
+      text-align: left;
+      margin: 10px 0;
+      color: rgb(243, 26, 59);
+      font-size: 16px
+  }
+
+  /* 对比收藏加入 */
+
+  .res-opt {
+      /* width: 210px; */
+      height: 28px;
+      text-align: center;
+      line-height: 28px;
+      margin: 10px 0 0 0;
+      border: 1px solid #EEE;
+      overflow: hidden;
+      border-radius: 2px;
+      /* background: chartreuse; */
+  }
+
+  .res-opt .btn-db {
+      width: 69px;
+      border-right: 1px solid #eeffff;
+  }
+
+  .res-opt .btn-db:hover {
+      background: #EEE;
+  }
+
+  .res-opt .btn-db:nth-of-type(3) {
+      border-right: none;
+  }
+
+  .res-opt .btn-db:nth-of-type(1) {
+      background: red url(../images/phone-list.png) 100px 80xp;
+  }
+
+  .res-opt .btn-db:nth-of-type(3) {
+      width: 90px;
+  }
+
+
+
+  /* 页码 */
+  .page {
+      /* margin-top:30px; */
+      width: 1130px;
+      /* height: 100px; */
+      margin: 40px auto;
+      text-align: center;
+      font-family: Verdana;
+      padding: 10px 16px;
+  }
+
+  .page a {
+      display: inline-block;
+      margin-top: 60px;
+      height: 40px;
+      width: 40px;
+      line-height: 40px;
+      font-size: 14px;
+      border: #CCC solid 1px;
+      text-decoration: none;
+      font-size: 13px;
+      margin-left: 5px;
+      background: #FFF
+  }
+
+  .page a:hover {
+      font-weight: bold;
+      background-color: #bdbdc0;
+      color: #FFF;
+      /* border-color: #09F */
+  }
+
+  .page .active {
+      /* background: #CCC */
+      font-weight: bold;
+      background-color: #6a6a6f;
+      color: #fff;
+  }
+
+  /* 狮子 */
+
+  .page .lion {
+      display: inline-block;
+      width: 40px;
+      height: 22px;
+      top: -22px;
+      opacity: 1;
+      filter: alpha(opacity=100);
+      background: url(../images/phone-list.png) no-repeat -79px -68px;
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .about-rec {
+    width: 100%;
+    margin-top: 25px;
+}
+.root1390 .aboutRec {
+    width: 1390px;
+}
+.aboutRec {
+    width: 1190px;
+    height: 34px;
+    margin: 0 auto;
+}
+.aboutRec li.cur {
+    background: #E4E4E4;
+    font-size: 14px;
+    color: #333;
+    font-family: MicrosoftYaHei;
+}
+.aboutRec li {
+    display: none;
+    float: left;
+    padding: 0 17px;
+    line-height: 34px;
+    border-radius: 2px 2px 0 0;
+    font-size: 12px;
+    color: #666;
+    cursor: pointer;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.about-rec .recGoodsBox {
+    width: 100%;
+    background: #F8F8FA;
+    height: 165px;
+    overflow: hidden;
+    padding: 14px 0;
+    border-top: 1px solid #E4E4E4;
+}
+.root1390 .about-rec .recGoodsList {
+    width: 1390px;
+}
+.about-rec .recGoodsList {
+    margin: 0 auto;
+    width: 1240px;
+}
+.about-rec .recGoodsList .goods {
+    padding: 10px 10px 0 10px;
+    width: 120px;
+    height: 155px;
+    background-color: #fff;
+    float: left;
+    border-radius: 4px;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 14px;
+    transition: all .3s;
+    cursor: pointer;
+}
+.about-rec .recGoodsList .goods img {
+    width: 120px;
+    height: 120px;
+    display: block;
+}
+.about-rec .recGoodsList .goods span {
+    font-family: Arial;
+    line-height: 28px;
+    color: #F60;
+    font-size: 18px;
+}

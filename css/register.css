@@ -1,0 +1,172 @@
+a,i,b,em{
+    display: inline-block;
+    font-style: normal;
+}
+
+html,body{
+    width:100%;
+    height: 100%;
+    font-size: 12px;
+}
+
+/* 注册css */
+.header-register{
+    width: 990px;
+    height: 100px;
+    margin: 0 auto;
+}
+.header-register .logo{
+    width: 189px;
+    height: 80px;
+    float: left;
+    padding-top: 20px;
+    background: url(../images/logo.png) no-repeat;
+    background-position-y: 20px ;
+}
+/* 头部 */
+.header-register .header-title{
+    font-size: 18px;
+    float: left;
+    margin: 40px 20px 0;
+}
+.header-register .header-gologin{
+    float: right;
+    margin-top: 80px;
+}
+.header-register .header-gologin:hover{
+    color: #f60;
+}
+/* 注册内容 */
+.main-register{
+    width: 988px;
+    height: 410px;
+    margin: 0 auto;
+    color: #222222;
+    padding-top: 50px;
+    border: 1px solid #ddd;
+    border-top: 3px solid #f90;
+}
+.main-register .register-form {
+    width: 440px;
+    height: 100%;
+    margin: 0 304px;
+}
+/* 注册大礼包 */
+.main-register .register-form .gift-pkg  {
+    font-size: 14px;
+    margin-left: 16px;
+    color: #222222;
+}
+.main-register .register-form .gift-pkg i {
+    float: left;
+    width: 19px;
+    height: 17px;
+    margin-right: 6px;
+    background: url(../images/register-sprite.png) -75px -93px no-repeat;
+}
+.main-register .register-form .gift-pkg em {
+    color: #ff4400;
+}
+
+/* 表单内容 */
+/* 手机号码 */
+.register-form .input-box {
+    width: 378px;
+    height: 38px;
+    /* color: #222222; */
+    border: 1px solid #ccc;
+    line-height: 38px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+.register-form .input-box .title{
+    display: inline-block;
+    width: 70px;
+    height: 38px;
+    padding-left: 10px;
+}
+.register-form .input-box input{
+    height: 38px;
+    width: 296px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #222222;
+    /* border: 1px solid #ccc; */
+}
+/* 短信验证 */
+#msgCodeTitle{
+    color: #222222;
+    float: left;
+}
+
+#msgCode{
+    height: 38px;
+    width: 148px;
+    float: left;
+}
+.register-form .input-box .button {
+    width: 149px;
+    height: 38px;
+    margin: 0;
+    float: left;
+    color: #222222;
+    border-radius: 0px;
+    font-size: 14px;
+    cursor: pointer;
+    background: #F5F5F5;
+    border-left: 1px solid #ccc;
+}
+.register-form .input-box .button:hover {
+color: #f60;
+}
+/* 企业注册 */
+.register-form  .businessReg{
+    /* width: 17px; */
+    height: 15px;
+    line-height: 15px;
+    font-size: 14px;
+    color: #f60;
+}
+.register-form  .businessReg i {
+    float: left;
+    width: 17px;
+    height: 15px;
+    margin-right: 4px;
+    background: url(..//images/register-sprite.png) -141px -93px no-repeat;
+    /* margin: 3px 5px 0 0; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 按钮-立即注册 */
+.main-register .register-form .register-btn.button {
+    margin: 60px 0 10px;
+    display: inline-block;
+    width: 380px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #f60;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+}
+
+
+
+
+

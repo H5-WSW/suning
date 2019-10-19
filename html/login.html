@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>苏宁易购登录</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/login.js"></script>
+</head>
+<!--  -->
+
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <a href="http://www.suning.com" class="logo"></a>
+        <div style="margin-left:189px;padding:37px 0 0 16px;*zoom:1">
+            <!-- <div style="margin-right:-100px;*zoom:1"> -->
+            <div class="bind-phone">依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号绑定验证！<a target="_blank"
+                    href="https://sale.suning.com/all/regProtocol/yssm.html">
+                    <font color="#f60">《隐私政策》</font>
+                </a>已上线，将更有利于保护您的个人隐私。</div>
+            <!-- </div> -->
+            <a id="LOGIN_ADVISE" href="http://ued.suning.com/survey/express/d29va1Nr" target="_blank"
+                class="advise"><i></i>我想对“登录”提意见</a>
+        </div>
+    </div>
+
+    <!-- 内容部分 -->
+    <div class="main-warp">
+        <div class="main">
+            <div class="login-c">
+                <!-- 背景图点击链接 -->
+                <a href="index.html" target="_blank" class="single-link"></a>
+                <!-- (1)登录模块 -->
+                <div class="login-form">
+
+                    <!-- title -->
+                    <div class="login-tab">
+                        <div class="login-tab-item active"><span class="">扫码登录</span><i class=""></i></div>
+                        <div class="login-tab-item "><span>账号登录</span> <i></i></div>
+
+                    </div>
+                    <div class="pc-login">
+
+                        <!-- (1-1)扫码登录 -->
+                        <div class="scan-login current">
+                            <!-- 二维码图 style="display: none;"-->
+                            <div class="qr-phong-warp">
+                            <img  class="qr" src="../images/qr-login.png" alt="">
+                            <!-- ？划入显示图 -->
+                            <img class="phone" src="../images/scan.png" alt="">
+                        </div>
+                            <p class="scan-login-text"> 打开<span>苏宁易购APP</span>扫码登录</p>
+                        </div>
+
+
+
+
+                        <!-- (2-2)账号登录 -->
+                        <div class="username-login">
+
+                            <div class="input-box">
+                                <div class="form-item phone">
+                                    <em id="icon-user"></em>
+                                    <input id="userName-ID" type="text" value="17776366374" placeholder="用户名/手机/邮箱">
+                                    <!-- <span class="form-group__message">用户名不能为空</span> -->
+                                </div>
+                                <div class="form-item phone">
+                                    <em id="icon-pas"></em>
+                                    <div class="content">
+                                        <input id="password-ID" type="password" value="123456" maxlength="20"
+                                            name="password" placeholder="请输入密码">
+                                        <!-- <span class="form-group__message">密码不能为空</span> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 忘记密码 -->
+                            <div class="forget-pwd"><i></i>
+                                <span class="forget-pwd-msm"> 短信验证码登录</span>
+                                <a href="#" class="forget-pwd-link">忘记密码？</a>
+                            </div>
+                            <!-- 登录按钮 -->
+                            <div class="form-item"><button class="logon button" id="loginBtn">登录</button></div>
+                        </div>
+                    </div>
+                    <!-- 免费注册 -->
+                    <div class="free-reg">
+                        <a class="free-reg-text" href="#">免费注册 有惊喜 &gt;</a>
+                    </div>
+                    <!-- 使用其他登录方式 -->
+                    <div class="bind-login">
+                        <span class="title">使用以下账号登录</span>
+                        <div class="common clearfix">
+                            <a name="Logon_index_denglu027" href="#" class="qq"><i></i>QQ</a>
+                            <a name="Logon_index_denglu026" href="#" class="weixin"><i></i>微信</a>
+                            <a name="Logon_index_denglu017" href="#" class="yifubao"><i></i>易付宝</a>
+                            <a name="Logon_index_denglu031" href="#" class="weibo"><i></i>微博</a>
+                        </div>
+                        <div class="more">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        /* (1)实现切换的功能 */
+        $(".login-tab-item").click(function () {
+            // 设置头部title样式
+            //     $(this).children().eq(1).addClass("active");
+            //     $(this).siblings().children().eq(1).removeClass("active");
+            // console.log($(this));
+            //切换内容
+            let index = $(this).index();
+            $(".pc-login").children().eq(index).addClass("current").siblings().removeClass("current");
+
+
+
+            /* (2)登录按钮的点击事件 */
+            $("#loginBtn").click(function () {
+                let usernameVal = $("#userName-ID").val();
+                // console.log($(this));
+                let passwordVal = $("#password-ID").val();
+                // $(usernameVal)="17776366374";
+                // $(passwordVal)="123456";
+
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            transition: 1s;
+            widows: 1s;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        div {
+            font-size: 100px;
+            text-align: center;
+            line-height: 1080px;
+            width: 100%;
+            height: 1080px;
+            box-sizing: border-box;
+            border: 2px solid red;
+        }
+
+        ul {
+            position: fixed;
+            top: 400px;
+            left: 400px;
+            width: 40px;
+            height: 200px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        li {
+
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        a {
+            color: white;
+            background: #999;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        a:hover {
+            background: pink !important;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a>1</a></li>
+        <li><a>2</a></li>
+        <li><a>3</a></li>
+        <li><a>4</a></li>
+        <li><a>5</a></li>
+    </ul>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <script>
+        /* 1-获取页面的标签 */
+        var AllDiv = document.getElementsByTagName("div");
+        var Alla = document.getElementsByTagName("a");
+        /* 2-遍历便签，添加点击事件 */
+        var timer;
+        var gotoWd;
+        for (var k = 0; k < Alla.length; k++) {
+            Alla[k].index = k;
+            Alla[k].onclick = function () {
+                /* 当标签被点击，获取当前的便签 */
+                self = this;
+                /* 用定时器实现滑动效果，每次加减40px */
+                /* 为了防止定时器的叠加*/
+                clearInterval(timer);
+                timer = setInterval(function () {
+                    /* 做特殊处理，当出现特殊的窗口值（不是整数时）转换为整数 */
+                    gotoWd = Math.floor(window.scrollY / 40) * 40;
+                    if (gotoWd > self.index * 1080) {
+                        gotoWd -= 40;
+                    } else
+                    if (gotoWd < self.index * 1080) {
+                        gotoWd += 40;
+                    }
+                    /* 当跳转到指定位置的时候要清除定时器（否则会一直进行加或减） */
+                    if (gotoWd == self.index * 1080) {
+                        window.scrollTo(0, gotoWd);
+                        clearInterval(timer);
+                    }
+                    /* 每5ms在当前基础上跳转40px */
+                    window.scrollTo(0, gotoWd);
+                }, 5);
+            };
+
+        }
+        //默认选中第一楼
+        Alla[0].style.background = "pink"; 
+        /* 窗口滑动事件，当出现滑动时，判断当前的滚动条的Y值 */
+        onscroll = function () {
+            /* 排他 */
+            for (var j = 0; j < Alla.length; j++) {
+                Alla[j].style.background = "#999";
+            }
+            var i = Math.floor(window.scrollY / 1080);
+            Alla[i].style.background = "pink";
+        }
+    </script>
+</body>
+
+</html>

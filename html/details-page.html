@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>苏宁易购详情页</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/details-page.css">
+    <link rel="stylesheet" href="../css/footer1.css">
+    <link rel="stylesheet" href="../css/footer2.css">
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/details-page.js"></script>
+</head>
+
+<body>
+    <!-- 1--header -->
+    <div class="g-header">
+        <div class="wrapper wrapper2">
+            <div class="g-search" style="z-index: 3;">
+                <form method="get">
+                    <div class="search-inner clearfix">
+                        <span class="left-sidebar"></span>
+                        <input tabindex="0" id="searchKeywords" type="text" class="search-keyword search-keyword-yg"
+                            value="" autocomplete="off">
+                        <input sa-uv="head_searcha" id="searchEbuySubmit" type="button" class="search-btn" value="搜易购"
+                            style="padding:0px;letter-spacing: 0px;">
+                        <input sa-uv="head_searchs" id="searchShopSubmit" type="button"
+                            class="search-btn searchstore-btn" value="搜本店" style="padding:0px;letter-spacing: 0px;">
+                        <span class="right-sidebar"></span>
+                    </div>
+                    <div class="g-search-hotwords">
+                    </div>
+                    <div id="snKeywordNew" style="display:none"><input type="hidden" id="searchDefaultKeyword" value=""
+                            key="" apsclickurl="">
+                        <a name="public0_RSC_iPhone11_0-20006" target="_blank" sa-data="{'eletp':'hotkeyword'}"
+                            href="http://search.suning.com/iPhone11/">
+                            <font style="color:#FF6600">iPhone11</font>
+                        </a>
+                        <a name="public0_RSC_华为mate20X 5G_1-20006" target="_blank" sa-data="{'eletp':'hotkeyword'}"
+                            href="http://search.suning.com/%E5%8D%8E%E4%B8%BAmate20X%205G/">
+                            <font style="color:#FF6600">华为mate20X 5G</font>
+                        </a>
+                        <a name="public0_RSC_华为mate30_2-20006" target="_blank" sa-data="{'eletp':'hotkeyword'}"
+                            href="http://search.suning.com/%E5%8D%8E%E4%B8%BAmate30/">
+                            <font style="color:#FF6600">华为mate30</font>
+                        </a>
+                        <a name="public0_RSC_iQOO Pro 5G_3-20006" target="_blank" sa-data="{'eletp':'hotkeyword'}"
+                            href="http://search.suning.com/iQOO%20Pro%205G/">
+                            <font style="color:#FF6600">iQOO Pro 5G</font>
+                        </a>
+                        <a name="public0_RSC_红米note8_4-20006" target="_blank" sa-data="{'eletp':'hotkeyword'}"
+                            href="http://search.suning.com/%E7%BA%A2%E7%B1%B3note8/">
+                            <font style="color:#FF6600">红米note8</font>
+                        </a>
+                        <a name="public0_RSC_荣耀9X_5-20006" target="_blank" sa-data="{'eletp':'hotkeyword'}"
+                            href="http://search.suning.com/%E8%8D%A3%E8%80%809X/">
+                            <font style="color:#FF6600">荣耀9X</font>
+                        </a>
+                        <a name="public0_RSC_苹果_6-20006" target="_blank" sa-data="{'eletp':'hotkeyword'}"
+                            href="http://search.suning.com/%E8%8B%B9%E6%9E%9C/">苹果</a>
+                        <a name="public0_RSC_华为p30_7-20006" target="_blank" sa-data="{'eletp':'hotkeyword'}"
+                            href="http://search.suning.com/%E5%8D%8E%E4%B8%BAp30/">华为p30</a>
+                        <a name="public0_RSC_小米9_8-20006" target="_blank" sa-data="{'eletp':'hotkeyword'}"
+                            href="http://search.suning.com/%E5%B0%8F%E7%B1%B39/">小米9</a>
+                        <a name="public0_RSC_mate20_9-20006" target="_blank" sa-data="{'eletp':'hotkeyword'}"
+                            href="http://search.suning.com/mate20/">mate20</a>
+                        <a name="public0_RSC_小米_10-20006" target="_blank" sa-data="{'eletp':'hotkeyword'}"
+                            href="http://search.suning.com/%E5%B0%8F%E7%B1%B3/">小米</a>
+                        <a name="public0_RSC_荣耀v20_11-20006" target="_blank" sa-data="{'eletp':'hotkeyword'}"
+                            href="http://search.suning.com/%E8%8D%A3%E8%80%80v20/">荣耀v20</a>
+                        <a name="public0_RSC_vivo_12-20006" target="_blank" sa-data="{'eletp':'hotkeyword'}"
+                            href="http://search.suning.com/vivo/">vivo</a>
+                    </div>
+                </form>
+                <div id="ac_results" class="g-ac-results hide" style="display: none;"></div>
+            </div>
+            <div class="g-logo" id="G_SUNING_LOGO">
+                <!-- LOGO -->
+                <a href="http://www.suning.com" class="ng-logo" sap-expo="true">
+                    <img src="//res.suning.cn/public/v3/images/logo/snlogo.png?v=2015042703" height="100" width="190"
+                        alt="苏宁易购">
+                </a>
+            </div>
+            <div class="storname">
+                <div class="JS_storename changeh3 shop-icon" style="overflow:inherit">
+                    <i><a id="chead_indexUrl" href="//shop.suning.com/30001790/index.html"
+                            title="荣耀苏宁自营旗舰店"><strong>荣耀苏宁自营旗舰店</strong></a></i>
+                    <i class="fshop"></i>
+                </div>
+                <div class="bd clearfix">
+                    <div class="JS_store_grade store-grade">
+                        <h4 id="chead_road" class="">店铺信息<em><img id="chead_roadPic"
+                                    src="//ssr.suning.cn/resource/sfs/project/shopv2/common/css/images/juhua.gif"
+                                    style="display: none;"></em></h4>
+                        <div class="sg-details" style="display: none;">
+                            <ul class="store_contact">
+                                <li>
+                                    <span class="dt">服务承诺：</span>
+                                    <span class="dd">
+                                        <i class="zp">正品保障</i>
+                                    </span>
+                                </li>
+                                <li style="display:none;"><span class="dt">公司名称：</span><span class="dd JS_txtCtrl"><i
+                                            id="chead_companyName">苏宁云商集团股份有限公司</i></span></li>
+                                <li style="display:none;"><span class="dt">所 在 地：</span><span class="dd JS_txtCtrl"><i
+                                            id="chead_companyAddress">江苏,南京</i></span></li>
+                                <li><span class="dt">客服电话：</span><span class="dd"
+                                        id="chead_telPhone">4008-365-365</span></li>
+                                <div class="store-logo" id="chead_logoUrl"><img
+                                        src="//image.suning.cn/uimg/cshop/logo/000000000030001790.jpg_300w_300h?1541872990217">
+                                </div>
+                            </ul>
+                            <div class="h-exp clearfix" style="display:none;" id="guidShopLogoPlay"><a
+                                    href="javascript:void(0);" class="btn-exp JS-nearby-store" title="身边门店"
+                                    style="display:none;" id="guideShopLogo">体验店</a></div>
+                            <!--<a href="javascript:void(0);" class="icon_exp" title="广东馆" style="display:none;" id="gdShopMark">体验店</a> -->
+                            <!--<span class="icon_ic" id="gdShopSpan"><i title="南京青奥馆" id="gdShopMark">南京青奥馆</i></span>-->
+                            <div class="ft clearfix">
+                                <a id="chead_shopIndexUrl" sa-uv="head_in" href="//shop.suning.com/30001790/index.html"
+                                    class="btn btn_home">店铺首页</a>
+                                <a href="javascript:void(0)" sa-uv="head_col" class="btn btn_collect" id="storeShop3"
+                                    name="SHOP_30001790_XXTT_SCAN">关注店铺</a>
+                                <a href="//shop.suning.com/30001790/all.html" sa-uv="head_map"
+                                    class="btn btn_good">商品地图</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="online-sale" href="javascript:void(0)" id="onlineService1" sa-uv="header_online"
+                        ignore-page="true" sf-im="1" style="display: none; cursor: pointer;" sap-expo="true"><img
+                            style="vertical-align:middle;width:69px;height:18px;"
+                            src="//talk8.suning.com/project/yunxin/images/zconline.png?_t=1571058142175" alt="和我联系"></a>
+                    <a href="javascript:void(0);" class="JS-nearby-store nearby_store" style="display:none;"
+                        id="guideShopAround">身边门店</a>
+                </div>
+            </div>
+            <div class="JS-sf-trytoShop" style="display: none;">
+                <div class="sf-trytoShop">
+                    <dl class="sf-area clearfix">
+                        <dt>区域：</dt>
+                        <dd class="districtContainer">
+                            <a href="#" pguide-area="null">全部</a>
+                        </dd>
+                    </dl>
+                    <div class="sf-shopadd">
+                        <table class="sf-table">
+                            <tbody class="storeListContainer">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sf-sortbox sf-noDrag sf-autoWidth suning-show-mode">
+        <!-- all rights shop resolve -->
+        <link rel="stylesheet" type="text/css"
+            href="//resource.sop.suning.cn/shts/resource/sn_widget/css/common.widget.css">
+        <!-- [[head-->
+        <div class="sf-layoutList JS-head " layoutid="11662301"
+            style="background-repeat:repeat;background-position:left 0px;background-color:#fff;background-attachment:scroll;">
+            <div class="sf-module990 " pointx="F" modulestyle="990">
+                <!-- [[LAYOUT-F-->
+                <!-- [module][14081139][M1001]-->
+                <!--店招开始 -->
+                <div sa-uv="banner" class="sf-moduleList sf-noPadding" moduleid="14081139" pointx="" modulecode=""
+                    moduletype="" authority="1_0_1" maxadd="" addnext="">
+                    <div class="clearfix" style="height:120px;position:relative;">
+                        <div class="storeimgMap"
+                            style="position: absolute;height: 120px;left: 50%;margin-left: -960px;">
+                            <div class="image-maps-conrainer" style="position:relative;"> <img
+                                    src="//image.suning.cn/uimg/sop/commodity/526474414165436541679150_x.jpg" border="0"
+                                    usemap="#Map" ref="imageMaps">
+                                <div class="position-conrainer"
+                                    style="position: absolute; top: 0px; left: 0px; height: 120px;">
+                                    <div class="map-position" ref="1"
+                                        style="width:99.00926000000001px; height:105.00926000000001px; top:4.12962px;left:805.431px">
+                                        <div class="map-position-bg" style="cursor: default;"> </div> <a
+                                            class="link-number-text" target="_blank"
+                                            href="https://product.suning.com/0000000000/11222350219.html#?safp=d488778a.search.0.c6d79441c9&amp;safc=prd.0.0"></a>
+                                    </div> <input type="hidden" ref="1" link=""
+                                        value="99.00926000000001px,105.00926000000001px,805.431px,4.12962px">
+                                    <div class="map-position" ref="2"
+                                        style="width:100.00926000000001px; height:100.00926000000001px; top:7.93982px;left:929.683px">
+                                        <div class="map-position-bg" style="cursor: default;"> </div> <a
+                                            class="link-number-text" target="_blank"
+                                            href="https://product.suning.com/0000000000/11061298264.html#?safp=d488778a_10004_0_93a49799d8"></a>
+                                    </div> <input type="hidden" ref="2" link=""
+                                        value="100.00926000000001px,100.00926000000001px,929.683px,7.93982px">
+                                    <div class="map-position" ref="3"
+                                        style="width:99.00926000000001px; height:99.00926000000001px; top:9.90741px;left:1069.75px">
+                                        <div class="map-position-bg" style="cursor: default;"> </div> <a
+                                            class="link-number-text" target="_blank"
+                                            href="https://product.suning.com/0000000000/10673154488.html#?safp=d488778a_10004_0_93a49799d8"></a>
+                                    </div> <input type="hidden" ref="3" link=""
+                                        value="99.00926000000001px,99.00926000000001px,1069.75px,9.90741px">
+                                    <div class="map-position" ref="4"
+                                        style="width:99.00926000000001px; height:100.00926000000001px; top:8.87732px;left:1198.77px">
+                                        <div class="map-position-bg" style="cursor: default;"> </div> <a
+                                            class="link-number-text" target="_blank"
+                                            href="https://product.suning.com/0000000000/10676576204.html#?safp=d488778a_search4A.suning.com_0_bca252b771"></a>
+                                    </div> <input type="hidden" ref="4" link=""
+                                        value="99.00926000000001px,100.00926000000001px,1198.77px,8.87732px">
+                                    <div class="map-position" ref="5"
+                                        style="width:100.00926000000001px; height:100.00926000000001px; top:8.93518px;left:1322.9px">
+                                        <div class="map-position-bg" style="cursor: default;"> </div> <a
+                                            class="link-number-text" target="_blank"
+                                            href="https://product.suning.com/0000000000/10912876474.html?safp=d488778a.dn02062.11726239110.1&amp;safc=prd.0.0"></a>
+                                    </div> <input type="hidden" ref="5" link=""
+                                        value="100.00926000000001px,100.00926000000001px,1322.9px,8.93518px">
+                                    <div class="map-position map-video"
+                                        style="width:50px; height:111px; top:3.8773193359375px;left:520.9722595214844px">
+                                        <div class="map-position-bg" style="cursor: default;"></div> <span
+                                            class="link-number-text" sf-favorite=""></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- 2 -->
+    <div class="phonelist-warp">
+        <div class="phonelist-top">
+            <a href="#">首页</a>
+            <i>></i>
+            <a href="">手机/数码/配件</a>
+            <i>></i>
+            <dl>
+                <dt><a href="">手机通讯</a></dt>
+                <dd></dd>
+            </dl>
+            <i>></i>
+            <a href="">手机</a>
+            <i>></i>
+            <dl>
+                <dt><a href="">品牌<span>荣耀honor</span></a></dt>
+                <dd></dd>
+            </dl>
+            <i>></i>
+            <div class="phonelist-r-p">
+                <span class="operate">自营</span>
+                <a class="shopName" href="#">荣耀苏宁自营旗舰店</a>
+                <a class="connect" href="#">
+                    <span class="connect-icon"></span>
+                    <span class="connect-server">联系客服</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 3--详情页-manin -->
+    <div class="details-proinfo-wrap">
+        <div class="details-proinfo">
+            <!-- 左边-放大镜 -->
+            <div class="details-left">
+                <div class="mglass-box">
+                    <img src="//imgservice.suning.cn/uimg1/b2c/image/ICsoVK4GOw4M_jWfclg9cA.jpg_800w_800h_4e">
+                    <div class="mouse-touch">
+
+                    </div>
+                </div>
+                <div class="mglass-big">
+                    <img src="//imgservice.suning.cn/uimg1/b2c/image/ICsoVK4GOw4M_jWfclg9cA.jpg_800w_800h_4e">
+                </div>
+
+                <!-- 底部小图 -->
+                <div class="details-list">
+                    <ul>
+                        <li><img src="//imgservice.suning.cn/uimg1/b2c/atmosphere/AljTKEx7_b3YF6-8U4UDkA.jpg_60w_60h_4e" alt=""></li>
+                        <li><img src="//imgservice.suning.cn/uimg1/b2c/image/WIfYz30WSozK_h49VpIB7Q.jpg_60w_60h_4e" alt=""></li>
+                        <li><img src="//imgservice.suning.cn/uimg1/b2c/image/1YzSjd0OPONNP35doPfmZw.jpg_60w_60h_4e" alt=""></li>
+                        <li><img src="//imgservice.suning.cn/uimg1/b2c/image/qzgHIAizLVeAnS0ShqTtaA.jpg_60w_60h_4e" alt=""></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <!-- 右边---内容 -->
+            <div class="details-right">
+                <h1 id="itemDisplayName">
+                    <span>自营</span> 华为/荣耀（honor）20S 6GB+128GB 蝶羽蓝 李现同款 4G全网通 3200万人像超级夜景 4800万超广角AI三摄 麒麟810旗舰级芯片全面屏手机
+                </h1>
+                <h2 id="promotionDesc">【李现同款新品，限量抢购】3200万人像超级夜景 4800万超广角AI三摄 麒麟810旗舰级芯片&nbsp;&nbsp;<a href="#"
+                        class="promotionDesc-a">荣耀爆品特惠，双十一提前抢火热开抢！</a></h2>
+                <!-- 标价 -->
+                <div id="priceDom">
+                    <span class="title">&nbsp;易&nbsp;购&nbsp;价</span>
+                    <span class="price">￥<i>1899</i>.00</span>
+                </div>
+                <!--地址 -->
+                <p class="des-ads"><span
+                        class="ads-title">送&nbsp;&nbsp;&nbsp;&nbsp;至</span>广东&nbsp;&nbsp;广州&nbsp;&nbsp;天河区
+                </p>
+                <p class="des-contact"><img src="../images/header-contact-self.gif" alt=""><span>联系客服</span></p>
+                <div class="product-img">
+                    <span>颜&nbsp;&nbsp;&nbsp;&nbsp;色</span>
+                    <div class="allImg img-wihte"><img src="../images/des-img/JFRtY04p7w66mmAiIN5E4w.jpg" alt="">碟羽白
+                    </div>
+                    <div class="allImg img-gray"> <img src="../images/des-img/T7Cl7ow2bLmQpSVKvrY5YQ.jpg" alt="">蝶羽蓝
+                    </div>
+                    <div class="allImg img-bulue"><img src="../images/des-img/V_jIDMqx673joK-aMvVCJA.jpg" alt="">蝶羽黑
+                    </div>
+                </div>
+                <div class="des-size"> <span>内&nbsp;&nbsp;&nbsp;&nbsp;存</span>
+                    <i class="size-text size1">6G+128G</i>
+                    <i class="size-text size2">8G+128G</i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="footer1"></div>
+    <div class="footer2"></div>
+</body>
+
+</html>

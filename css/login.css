@@ -1,0 +1,351 @@
+a,i,b,em{
+    display: inline-block;
+    font-style: normal;
+}
+
+html,body{
+    width:100%;
+    height: 100%;
+    font-size: 12px;
+}
+
+.header{
+    width: 970px;
+    height: 100px;
+    margin: 0 auto;
+}
+.header .logo{
+    width: 189px;
+    height: 80px;
+    float: left;
+    padding-top: 20px;
+    background: url(../images/logo.png) no-repeat;
+    background-position-y: 20px ;
+}
+.header .bind-phone{
+    float: left;
+    color: #333;
+    font-size: 12px;
+    background: #fefff1;
+    border: 1px solid #fecd66;
+    line-height: 16px;
+    padding: 4px 6px;
+}
+.header .advise{
+    float: right;
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 8px;
+}
+.header .advise:hover{
+    color: #fecd66;
+}
+.header .advise i{
+
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    background: url(../images/sprite.png) -67px -27px no-repeat;
+}
+.main-warp{
+    width: 100%;
+    /* margin: 0 outo; */
+    background: url(../images/login-bg.jpg) center no-repeat;
+}
+.main .login-c{
+    width: 970px;
+    height: 570px;
+    min-width: 970px;
+    margin: 0 auto;
+    
+}
+.main .login-c .single-link {
+    width: 570px;
+    height: 100%;
+    float: left;
+    /* background: orange; */
+}
+/* 登录 */
+.login-form {
+    position: relative;
+    width: 360px;
+    margin-top: 50px;
+    background: #fff;
+    box-shadow: 0 0 2px #ececec;
+    font-family: "Microsoft Yahei";
+}
+.main .login-c .login-form {
+    float: right;
+    background: #fff;
+}
+.login-form .login-tab {
+    height: 50px;
+    line-height: 20px;
+    font-size: 16px;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+}
+
+.login-form .login-tab .login-tab-item{
+    position: relative;
+    width:50%;
+    height: 100%;
+    float: left;
+    cursor: pointer;
+    text-align: center;
+    /* background: lightcoral; */
+}
+
+
+
+
+
+
+/* 切换? */
+/* 登录的头部 */
+.login-form .login-tab .login-tab-item span {
+    color: #333;
+    display: block;
+    border-right: 1px solid #eee;
+    margin-top: 15px;
+}
+/* .login-form .login-tab .login-tab-item span:nth-of-type(1) {
+    color: #f60;
+} */
+.login-form .login-tab .login-tab-item i {
+    position: relative;
+    width: 70px;
+    border-bottom: 4px solid #f60;
+    
+}
+
+
+.login-form .pc-login .scan-login{
+    margin-top: 30px;
+    height: 240px;
+    position: relative;
+    font-size: 12px;
+    text-align: center;
+    background: #fff;
+    display: none;               /* 隐藏 */
+}
+
+/* 二维码+划入图 */
+.pc-login .scan-login .qr-phong-warp{
+    position: relative;
+    height: 176px;
+    margin: 0 auto;
+    padding-top: 30px;
+    /* padding-top: 20px; */
+    /* background: rgb(210, 236, 183); */
+}
+.login-form .pc-login .scan-login .qr{
+    /* height: 176px; */
+    margin: 0 auto;
+    /* background: rgb(210, 236, 183); */
+}
+.pc-login .scan-login .qr-phong-warp:hover .qr{
+    transform: translateX(-70px);
+    transition: 1s ;
+}
+.pc-login .scan-login .qr-phong-warp .phone{
+    position: absolute;
+    top: 0px;
+    right: 34px;
+    width: 133px;
+    height: 200px;
+    opacity:0;
+    /* background:red url("")no-repeat; */
+}
+.pc-login .scan-login .qr-phong-warp:hover .phone{
+    opacity:1;
+    transition: 0s 0.5s;
+}
+
+
+.login-form .pc-login .scan-login .phone-scan:hover{
+    opacity:0;
+}
+.login-form .pc-login .scan-login .scan-login-text{
+    margin-top: 10px;
+}
+.login-form .pc-login .scan-login .scan-login-text i{
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    background: url(../images/sprite.png) -164px -67px no-repeat;
+    vertical-align: -3px;
+}
+.login-form .pc-login .scan-login .scan-login-text span{
+    color: #f60;
+}
+.login-form .pc-login .scan-login .scan-login-text span:hover{
+    text-decoration: underline;
+}
+
+/* 账号密码登录--输入框 */
+.login-form .pc-login .username-login{
+    height: 230px;
+    margin-top: 40px;
+    color: #999;
+    display: none;
+}
+.login-form .pc-login .username-login input{
+    height: 34px;
+    width: 252px;
+    float: left;
+    font-size: 14px;
+    line-height: 18px;
+    color: #999;
+}
+.login-form .pc-login .username-login .input-box{
+    width: 290px;
+    position: relative;
+    padding: 0 32px 0 36px;
+    overflow: hidden;
+}
+.pc-login .username-login .input-box .form-item{
+    border: 1px solid #ddd;
+    width: 290px;
+    height: 34px;
+    margin-bottom: 30px;
+}
+.pc-login .username-login .input-box .form-item em{
+    width: 38px;
+    height: 36px;
+    float: left;
+}
+#icon-user{
+  background: url(../images/sprite.png)-123px -67px no-repeat;  
+}
+#icon-pas{
+    background: url(../images/sprite.png) 0 -108px no-repeat;  
+  }
+
+
+/* 忘记密码 */
+.login-form .pc-login .username-login .forget-pwd{
+    height: 20px;
+    color: #333;
+    margin: 10px 0 10px;
+    padding: 0 32px 0 36px;
+}
+.pc-login .username-login .forget-pwd .forget-pwd-msm{
+    float: left;
+}
+.pc-login .username-login .forget-pwd i{
+    display: block;
+    float: left;
+    width: 18px;
+    height: 16px;
+    background:  url(../images/sprite.png) -21px -149px no-repeat;
+}
+
+.pc-login .username-login .forget-pwd .forget-pwd-msm:hover{
+    color: #f60;
+    cursor: pointer;
+}
+.pc-login .username-login .forget-pwd .forget-pwd-link{
+    float: right;
+}
+.pc-login .username-login .forget-pwd .forget-pwd-link:hover{
+    color: #f60;
+    text-decoration: underline;
+}
+/* 登录按钮 */
+.login-form .pc-login .username-login .form-item .logon.button {
+    width: 290px;
+    display: block;
+    outline: none;
+    border: none;
+    height: 45px;
+    line-height: 45px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 36px;
+    background-color: #f60;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+}
+
+
+/* <!-- 免费注册 --> */
+.login-form .free-reg{
+    text-align:center;
+    /* margin: 12px 0 35px; */
+    background-color: #fff;
+}
+.login-form .free-reg .free-reg-text{
+    position: relative;
+    top: -2px;
+    left: 14px;
+}
+.login-form .free-reg .free-reg-text:hover{
+    color: #f60;
+    text-decoration: underline;
+}
+
+/* 使用其他登录方式 */
+.login-form .bind-login {
+    position: relative;
+    width: 310px;
+    margin: 30px auto 0;
+    border-top: 1px solid #ddd;
+    padding: 19px 0 17px;
+    /* background-color: red; */
+}
+.login-form .bind-login .title{
+    position: absolute;
+    width: 50%;
+    height: 20px;
+    top: -10px;
+    margin-left: 90px;
+    color: #999;
+    background-color: #fff;
+    text-align: center;
+}
+.login-form .bind-login .common a {
+    height: 16px;
+    float: left;
+    padding: 0 7px;
+    border-right: 1px solid #dedcd5;
+    line-height: 16px;
+}
+.login-form .bind-login .common a i {
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+.login-form .bind-login .common .qq i {
+    background: url(../images/sprite.png) -140px -108px no-repeat;
+}
+.login-form .bind-login .common .weixin i {
+    background: url(../images/sprite.png) -90px -27px no-repeat;
+}
+.login-form .bind-login .common .yifubao i {
+    background: url(../images/sprite.png) -119px -108px no-repeat;
+}
+.login-form .bind-login .common .weibo i {
+    background: url(../images/sprite.png) 0 -149px no-repeat;
+}
+
+.login-tab-item>span{
+    color: #F90;
+}
+
+
+
+
+/* 显示 */
+.login-form .pc-login .current{
+    display: block;           
+}
+
+/* 
+.no-show-i{
+    display: none;
+} */
+

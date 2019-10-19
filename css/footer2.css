@@ -1,0 +1,77 @@
+
+
+
+.footer-warp {
+    width: 100%;
+    height: 200px;
+    background-color: #ffffff;
+}
+
+footer {
+    width: 990px;
+    margin: 0 auto;
+
+}
+
+.footer .ng-s-f-con {
+    width: 990px;
+    margin: 0 auto;
+    height: 180px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+/* 1 & 2-url-list */
+.footer .ng-s-f-con .ng-url-list {
+    line-height: 25px;
+    height: 25px;
+    color: #666666;
+}
+
+.footer .ng-s-f-con .ng-url-list span {
+    color: #666666;
+    padding: 0 8px;
+}
+
+/* <!-- 3段落 --> */
+.footer .ng-s-f-con .ng-copyright {
+    
+    display: block;
+    width: 990px;
+    line-height: 24px;
+    float: left;
+    color: #999999;
+}
+
+.footer .ng-s-f-con .ng-copyright span {
+    color: #888;
+    padding: 0 8px;
+}
+
+.footer .ng-s-f-con .ng-copyright a {
+    color: #999999;
+}
+.footer .ng-s-f-con .ng-copyright .su-police {
+    position: relative;
+    margin-left: 22px;
+}
+.footer .ng-s-f-con .ng-copyright .su-police i {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 2px;
+    left: -22px;
+    background-image: url(../images/police-footer.png);
+}
+/* 6 */
+.footer .ng-s-f-con .ng-authentication {
+    /* width: 100%; */
+    height: 24px;
+    /* margin: 0 auto; */
+    padding: 0 323px;
+
+}
+.footer .ng-s-f-con .ng-authentication img{
+    padding: 0 5px;
+    float: left;
+}

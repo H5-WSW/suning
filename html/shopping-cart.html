@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/shopping-cart.css">
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/shopping-cart.js"></script>
+</head>
+
+<body>
+    <!--1---- 广告+logo -->
+    <div id="cart-one-header" class="cart-header" sap-modid="91C3">
+        <div class="wrapper clearfix">
+            <div class="cart-top-pic"><a name="icart1_top_row_wind" href="https://xilinmen.suning.com/?adtype=3"
+                    title="喜临门大牌抢购" target="_blank" sap-expo="true"><img
+                        src="//image.suning.cn/uimg/aps/material/155904346710465225.jpg" alt="喜临门大牌抢购"></a></div>
+            <div class="g-logo" id="cart-g-logo">
+                <a href="//www.suning.com" name="icart1_shopping_logo" sap-expo="true"><img
+                        src="//res.suning.cn/public/images/logo/snlogo.png?v=2019092117" alt="苏宁易购"></a>
+            </div>
+
+            <!-- 2----购物车头部搜索框 start -->
+            <div class="cart-search">
+                <div class="cart-search-box">
+                    <i class="search-icon"></i>
+                    <input type="text" class="cart-search-input" name="search_input_box">
+                </div>
+                <a href="javascript:void(0);" class="cart-search-btn" name="search_go" target="">搜索</a>
+                <!--搜索列表 start -->
+                <div class="cart-search-list" style="display: none;">
+                    <ul>
+                    </ul>
+                </div>
+                <!--搜索列表 end   -->
+            </div>
+            <!-- 购物车头部搜索框 end   -->
+        </div>
+
+        <div class="effective-tips hide effective-tip-cart1" id="cartOneTopNotificationBar">
+            <span class="cart1_title_tips">
+                <i class="cart1-tip-icon"><img src=""></i>
+                <a target="_blank" name="icart1_dbtz_dj"></a>
+            </span>
+            <a href="javascript:void(0);" class="tips-close" name="icart1_dbtz_gb"></a>
+        </div>
+
+    </div>
+
+    <!-- 3-------购物车 -->
+    <div class="cart-warp">
+        <div class="cart-box">
+            <!-- 3（1）用户地址栏 -->
+            <div id="cart-one-delivery" class="head-delivery wrapper clearfix">
+                <div class="city-select">
+                    <span class="delivery-desc fl c6">送货至</span>
+                    <div id="city" class="fl" name="icart1_switchAddress">
+                        <div class="ui-city"><a name="item_none_dizhi_01" href="###" class="ui-city-toggle"
+                                hidefocus="true"><em class="address-placement"><span id="provinceName" class="pr hide"
+                                        role="190,,,广东">广东</span><span id="citybName" class="ct"
+                                        role="1000041,9041,01,广州">广州</span><span id="districtName" class="ds"
+                                        role=",10274,01,荔湾区">荔湾区</span></em><b class="arr"></b></a></div>
+                    </div>
+                </div>
+                <div class="login-tips fl ml20">
+                    <p>现在<a href="javascript:void(0);" class="cart-btn login-btn">登录</a>，您的商品将被永久保存，并可查看之前加入的商品</p>
+                </div>
+            </div>
+            <!-- 3（2）购物车信息栏 -->
+            <div class="cart-msm">
+                <div class="th th-chk form th-chk-chkd">
+                    <div class="cart-checkbox">
+                        <input type="checkbox" id="chooseAllCheckBox" class="J-AllCheckBox" name="icart1_goods_all01">
+                        <!-- <label for="chooseAllCheckBox"></label> -->
+                    </div>
+                    全选
+                </div>
+                <div class="th th-item">商品信息</div>
+                <!-- <div class="th th-specs">规格</div> -->
+                <div class="th th-price">单价（元）</div>
+                <div class="th th-amount">数量</div>
+                <div class="th th-sum">小计（元）</div>
+                <div class="th th-op">操作</div>
+            </div>
+
+
+            <!-- 3（3）购物车列表 -->
+            <div class="cart">
+                <ul>
+                    <!-- <li>
+                    <input class="cart-ipt type="checked">
+                    <a class="cart-img" href=""><img src="" alt=""></a>
+                    <p class="cart-des"></p>
+                    <span class="cart-priceOne"></span>
+                    <div class="cart-num">
+                        <i class="num-dec">-</i><span class="num-sum"></span><i class="num-add">+</i>
+                    </div>
+                    <span class="cart-sum"></span>
+                    <span class="cart-del">删除</span>
+                </li> -->
+                </ul>
+            </div>
+            <!-- 3（3）购物车底部合计总计+数量栏 -->
+            <div class="cart-allAdd">
+                <div class="cart-allAdd-l">
+                    <!-- 复选框 -->
+                    <div class="th th-chk form th-chk-chkd">
+                        <div class="cart-checkbox">
+                            <input type="checkbox" id="chooseAllCheckBox" class="J-AllCheckBox"
+                                name="icart1_goods_all01">
+                            <!-- <label for="chooseAllCheckBox"></label> -->
+                        </div>
+                        <span class="allAdd-text1">全选</span>
+                        
+
+                        <span class="allAdd-text1">删除选中商品</span>
+                        <span class="allAdd-text2">已选中 <i class="search-mou allAdd-color">0</i> 件</span>
+                        <i class="line"></i>
+
+                        <span class="allAdd-text4">总价（不含运费）：
+                            <span class="allAdd-priace allAdd-color">￥0.00</span></span>
+                        
+                    </div>
+                </div>
+                <div id="allAdd-price" class="cart-allAdd-r">
+                    结算
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- 4------猜你喜欢 -->
+        <div class="cart-recommend">
+            <!-- 头部 -->
+            <div class="recommend-header"><span>猜你喜欢</span></div>
+            <!-- list -->
+
+
+            <div class="page-list">
+                <!-- <img src="" alt=""> -->
+            </div>
+            <!-- 左右箭头 -->
+            <a href="" class="arrow"><i class="arrow-left"></i></a>
+            <a href="" class="arrow"><i class="arrow-right"></i></a>
+
+
+
+
+
+
+
+            <!-- <input type="checkbox" checked> -->
+
+
+
+
+        </div>
+</body>
+
+</html>

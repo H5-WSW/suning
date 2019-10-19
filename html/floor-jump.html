@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>楼层跳跃</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <style>
+        .floorJump-listBox {
+            width: 1000px;
+            height: 450px;
+            margin-left: 150px;
+            font-size: 200px;
+            font-weight: bolder;
+        }
+
+        .floorJump-listBox:nth-of-type(2n) {
+            background: rgb(161, 240, 161);
+        }
+
+        .floorJump-listBox:nth-of-type(2n+1) {
+            background: rgb(235, 143, 199);
+        }
+
+        .index-floorJump {
+            position: fixed;
+            top: 10%;
+            left: 80px;
+            /* position: relative; */
+            width: 68px;
+            padding-top: 9px;
+            border: 1px solid #DDD;
+            background: #f8f8f8;
+        }
+
+        /* 图 */
+        .index-floorJump .float-bg {
+            position: absolute;
+            width: 45px;
+            height: 37px;
+            left: 13px;
+            top: -29px;
+            z-index: 1;
+            background: url(../images/index-icon.png) -302px -80px;
+        }
+
+
+        /* .index-floorJump ul {
+    
+            width: 68px;
+            background: #f8f8f8;
+        } */
+
+        .index-floorJump ul li {
+            width: 68px;
+            height: 28px;
+            border-bottom: 1px solid #e8e8e8;
+            text-align: center;
+            line-height: 28px;
+            cursor: pointer;
+        }
+
+        /* returnTop--a */
+        .index-floorJump .floorJump-returnTop {
+            width: 68px;
+            height: 28px;
+            color: #F90;
+            text-align: center;
+            line-height: 28px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="index-floorJump">
+        <div class="float-bg"></div>
+        <ul class="index-floorJump-list">
+            <li class="floorJump-list"><a class="" href="#">手机电脑</a></li>
+            <li class="floorJump-list"><a class="" href="#">家用电器</a></li>
+            <li class="floorJump-list"><a class="" href="#">数码汽车</a></li>
+            <li class="floorJump-list"><a class="" href="#">生活家装</a></li>
+            <li class="floorJump-list"><a class="" href="#">美味生活</a></li>
+            <li class="floorJump-list"><a class="" href="#">母婴美妆</a></li>
+            <li class="floorJump-list"><a class="" href="#">服饰运动</a></li>
+            <li class="floorJump-list"><a class="" href="#">金融阅读</a></li>
+            <li class="floorJump-list"><a class="" href="#">猜你喜欢</a></li>
+            <!-- <li class="floorJump-list"></li> -->
+        </ul>
+        <a class="floorJump-returnTop" href="#">返回顶部</a>
+    </div>
+
+    <div class="floorJump-listBox">1</div>
+    <div class="floorJump-listBox">2</div>
+    <div class="floorJump-listBox">3</div>
+    <div class="floorJump-listBox">4</div>
+    <div class="floorJump-listBox">5</div>
+    <div class="floorJump-listBox">6</div>
+    <div class="floorJump-listBox">7</div>
+    <div class="floorJump-listBox">8</div>
+    <div class="floorJump-listBox">9</div>
+    <div class="floorJump-listBox">10</div>
+
+
+    <script>
+        /* 1-获取页面的标签 */
+        let AllFloorJumpDiv = document.querySelectorAll(".floorJump-listBox");
+        let AllFloorJumpList = document.querySelectorAll(".floorJump-list");
+        /* 2-遍历便签，添加点击事件 */
+        let timer;
+        let gotoWd;
+        for (let k = 0; k < AllFloorJumpList.length; k++) {
+            AllFloorJumpList[k].index = k;
+
+
+        AllFloorJumpList[k].onclick = function () {
+            /* 当标签被点击，获取当前的便签 */
+            self = this;
+            console.log("当前索引=" + AllFloorJumpList[k].index);
+
+            /* 用定时器实现滑动效果，每次加减40px */
+            /* 为了防止定时器的叠加*/
+            clearInterval(timer);
+            timer = setInterval(function () {
+                /* 做特殊处理，当出现特殊的窗口值（不是整数时）转换为整数 */
+                gotoWd = Math.floor(window.scrollY / 45) * 45;
+                if (gotoWd > self.index * 450) {
+                    gotoWd -= 45;
+                } else
+                if (gotoWd < self.index * 450) {
+                    gotoWd += 45;
+                }
+                /* 当跳转到指定位置的时候要清除定时器（否则会一直进行加或减） */
+                if (gotoWd == self.index * 450) {
+                    window.scrollTo(0, gotoWd);
+                    clearInterval(timer);
+                }
+                /* 每5ms在当前基础上跳转40px */
+                window.scrollTo(0, gotoWd);
+            }, 5);
+        };
+        }
+        //默认选中第一楼
+        AllFloorJumpList[0].style.background = "#f90";
+        /* 窗口滑动事件，当出现滑动时，判断当前的滚动条的Y值 */
+        onscroll = function () {
+            /* 排他 */
+            for (let j = 0; j < AllFloorJumpList.length; j++) {
+                AllFloorJumpList[j].style.background = "#f8f8f8";
+            }
+            let i = Math.floor(window.scrollY / 450);
+            AllFloorJumpList[i].style.background = "#f90";
+        }
+    </script>
+
+</body>
+
+</html>

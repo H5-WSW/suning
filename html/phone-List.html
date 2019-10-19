@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/phone-List.css">
+    <link rel="stylesheet" href="../css/footer1.css">
+    <link rel="stylesheet" href="../css/footer2.css">
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/phone-list.js"></script>
+
+</head>
+
+<body>
+    <div class="phonelist-top-warp clearfix">
+
+        <div class="phonelist-top">
+            <a href="#">首页</a>
+            <i>></i>
+            <a href="">手机/数码/配件</a>
+            <i>></i>
+            <dl>
+                <dt><a href="">手机通讯</a></dt>
+                <dd></dd>
+            </dl>
+            <a href="">手机</a>
+            <i>></i>
+            <dl>
+                <dt><a href="">品牌<span>荣耀honor</span></a></dt>
+                <dd></dd>
+            </dl>
+            <em>清空筛选</em>
+        </div>
+
+        <!-- 筛选列表 -->
+        <div class="search-wrap">
+            <div class="list-classify">
+                <ul>
+                    <li>价格</li>
+                    <li>0-500</li>
+                    <li>500-1000</li>
+                    <li>1000-1700</li>
+                    <li>1700-2800</li>
+                    <li>2800以上</li>
+                </ul>
+            </div>
+            <div class="list-classify">
+                <ul>
+                    <li>机身内存</li>
+                    <li>512GB</li>
+                    <li>256GB</li>
+                    <li>128GB</li>
+                    <li>64GB</li>
+                    <li>32GB</li>
+                </ul>
+            </div>
+            <div class="list-classify">
+                <ul>
+                    <li>网格制式</li>
+                    <li>全网通</li>
+                    <li>双卡双4G</li>
+                    <li>双卡单4G</li>
+                </ul>
+            </div>
+            <div class="list-classify">
+                <ul>
+                    <li>屏幕尺寸</li>
+
+                    <li><input name="size" checked="" type="checkbox"> 6.1y英寸以上</li>
+                    <li><input name="size" type="checkbox"> 5.6-6.0英寸</li>
+                    <li><input name="size" type="checkbox"> 5.5英寸以下</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 手机列表 -->
+        <div class="phonelist-box">
+            <!-- /* 排序栏 */ -->
+            <div class="btn-ran">
+                <span class="typeBtn">综合</span>
+                <span class="typeBtn">价格从高到低</span>
+                <span class="typeBtn">价格从低到高</span>
+                <div class="interval-input">
+                    <input type="text" id="startM" value="" class="min-price-input">
+                    <i>-</i>
+                    <input type="text" id="endM" value="" class="max-price-input">
+                </div>
+
+                <div class="btn-ran-r">
+                    <ul>
+                        <li><input name="size" type="checkbox"> 苏宁服务</li>
+                        <li><input name="size" checked="" type="checkbox"> 有货商品</li>
+                        <li><input name="size" type="checkbox"> 新品</li>
+                        <li><input name="size" type="checkbox"> 苏宁国际</li>
+                        <li><input name="size" type="checkbox"> 苏宁益品</li>
+
+                    </ul>
+                </div>
+            </div>
+            <ul class="box-list">
+                <!-- <li class="item">
+                <div class="item-box">
+                    <img src="./Snip20190919_18.png">
+                    <div class="price "><i class="price-icon">￥</i> 12.00</div>
+                    
+                     <div class="info-config" title=" 64GB |4GB |6.5英寸">
+                    <em> 64GB <i class="info-config-i">|</i>4GB <i class="info-config-i">|</i>6.5英寸</em>
+                        </div>
+                    <div class="title ">澳洲大龙虾</div>
+                    <div class="dis ">1000+评价</div>
+                    <div class="storeName ">皮皮虾的店</div>
+                </div>
+            </li> -->
+                <!-- <div class="res-opt">
+                    <a href="#" class="btn-db"><i></i>对比</a>
+                    <a href="#" class="btn-db"><i></i>收藏</a>
+                    <a href="#" class="btn-db"><i></i>加入购物车</a>
+                </div> -->
+            </ul>
+
+        </div>
+        <div id="page" class="page"><em class="lion"></em></div>
+
+        
+
+    </div>
+    <div class="about-rec" id="about-rec">
+        <ul class="aboutRec clearfix">
+            <li class="hotRec cur" style="display: list-item;">热销商品推荐</li>
+            <li class="finalBuy" style="display: list-item;">搜索此类商品的人最终购买</li>
+            <li class="historyRec">根据浏览历史为您推荐</li>
+            <li class="recentWatch">最近浏览</li>
+        </ul>
+        <div class="recGoodsBox clearfix" sap-modid="recGoodsBoxClearfix">
+            <div class="recGoodsList clearfix" id="recGoodsList">
+                <div class="about_hotRec" style="display: block;"><a
+                        href="https://th.suning.com/calCpcClicks?adtype=1&amp;tid=2875686590&amp;cmdCode=10989700373&amp;companyCode=70188594&amp;s=&amp;k=sB%2fY8hesc2DtZqHVvJA8f1f2txtGsuPMWN0zJkj28Vx32aJz13IFb48KiyQeJXo6zWASztQaThpg1kbgxx4nzX17%2f4q4whscehGDEXhRS2bh1ArNx9OKbOdFz%2bz0467yH68Mtff4Dsx8RZYClh%2b4KljurfLp1kEr1jkkKHTi0VmzT2SMP1kPDbe96tmYeJkt477OginjvxCs0bSmMZmb5itU04S7MItUNj1mnVZI4%2f8fyJMw3lAaAtJz17wWuxPvWOGTmNpU9Mi%2fGWxrhMYMJ%2fQpUxNgDx6wLeTPgxyUWQHTxHoL%2byAQ0v0fchAp%2b%2bZiPXOtHMYL%2fJTfHJApAnVBRYYYUmgy%2fqQ7V395ChqLSMGnq61h%2fs3V%2fvsamR32ndKE7m%2bpfv%2bGcnTCGhkR6ihTikWKghr6f0d2v4nQrW250XTMzbHmMhJeFsY9rIwT%2frmIuhi8Q6vUEwvQPB49892NnVtiNOfQTBquD9eEu4wN5N2uKlpFS5buEGJcUf4%2bzwUE&amp;clickUrl=http%3a%2f%2fproduct.suning.com%2f0000000000%2f10989700373.html&amp;click_id=JPbtKL20aY8mBIyD20000000000mR5c83"
+                        target="_blank" class="goods"
+                        sa-data="{'eletp':'prd','prdid':'10989700373','salestatus':'1','shopid':'0000000000'}"
+                        id="40026981"><img
+                            src="//imgservice.suning.cn/uimg1/b2c/image/8exKEji4LeTTMQ6TcsrX2w.jpg_200w_200h_4e"
+                            alt="" name="ssdsn_search_maijiajx_pic01"><span><i>¥</i>7999<i>.00</i></span></a><a
+                        href="https://th.suning.com/calCpcClicks?adtype=1&amp;tid=2875773641&amp;cmdCode=10574106066&amp;companyCode=70150104&amp;s=&amp;k=sB%2fY8hesc2DtZqHVvJA8f0i21McDGa40lJhVBoLlNkN68pnprAzFisurjEROLDt0%2fTNsFt%2bq8bRWzyf5csh5Ou6XZ8rfpZElJZ%2fQQ%2bLrx8e1gKGymdOLh575znQcc6DG0TqO%2bjUfN42ZqbA%2bhwS30HJ6wFl%2bo8ItgkqzVvrdgxXrIu4C2d0Py1yqo53dAbuNqIV60ChAVuL499pSnNhu%2fSslHbszORO5gZbRZoIHpTw7%2bu4gZoGHRIwvcO832ySxX7Cu2%2fty0Vdpn0bV9BWp5CxnjoN9rjMWkKyFsMyWdag1Lv%2b67jqcn2QEf4CLDT4j5Oj5q06xLI34Q7KRBM1usELiznq4nncGO%2bHYvyN7qhh3CdorfwjOHYcVACP9PWuLOLEAsjn1KxFuaGDd9IEQvjNa8yIuagae5lEmK1qqPv8LAMRF9O1oxOST4101BD4DdIYsvwSgCPB2P7YYWvm4rZIlaoEvYqrUjX75%2bOn44xYgpFTIZPv24uKInvzG7uq2&amp;clickUrl=http%3a%2f%2fproduct.suning.com%2f0070150104%2f10574106066.html&amp;click_id=JPbtKL20aY8mB5m420000000000p5Sc83"
+                        target="_blank" class="goods"
+                        sa-data="{'eletp':'prd','prdid':'10574106066','salestatus':'1','shopid':'0070150104'}"
+                        id="40001674"><img
+                            src="//imgservice.suning.cn/uimg1/b2c/image/w7DZH8DjNWElaKTUTiWWVQ.jpg_200w_200h_4e"
+                            alt="" name="ssdsn_search_maijiajx_pic01"><span><i>¥</i>179<i>.00</i></span></a><a
+                        href="https://th.suning.com/calCpcClicks?adtype=1&amp;tid=2871402622&amp;cmdCode=11249318125&amp;companyCode=70142956&amp;s=&amp;k=sB%2fY8hesc2DtZqHVvJA8f6uv6DAk6KfOB7gUJggHMXPGo7WUW8YiOqlF2LZWznK76QypqHDbdOyzMkVEQCSTUAUrI31In9A4GvWSp%2bjJwD%2b4mgEUX9UuNovJTuLVLTx42X%2bH%2fp1Rlrpt%2fL4LIO%2bcUcnkGzz2LdeBG7gnrcLXoBGqbklpFWAvgcHPJ28iPYhIgbpKTt4wbdPG8CePau6WstnjIwJpULXtrrCs8tKsqWdt7VpukLH62R%2f4SAxUDhuv0B%2b58gXgrwmjajKuQeyC%2bDa%2fxGubArqSjNEagjNYo691pWwncK7vabK5b1aLP9tG5AYa9gak6ZvvmoOerDLCq9z2XUKfuALzaqWqw20gPLae6Qp8AoHNT05pUBRHZLizpJo5mdf%2f1r9kcw1rQrH2JfhMeWksg4UL9eI%2bVXenmg%2bz34Wv43tdt5qeEpChzP%2fQjLJzrqkDe4yy34ufhLYkmb9hXGsgXfprRuD1p94iNLNbtpOZs%2bcxYZf0EoskuW3w&amp;clickUrl=http%3a%2f%2fproduct.suning.com%2f0070142956%2f11249318125.html&amp;click_id=JPbtKM20aY8mBxJK20000000000Wz6K83"
+                        target="_blank" class="goods"
+                        sa-data="{'eletp':'prd','prdid':'11249318125','salestatus':'1','shopid':'0070142956'}"
+                        id="40016212"><img
+                            src="//imgservice.suning.cn/uimg1/b2c/image/dlUYLub5wBXgMjOGCUlRgg.jpg_200w_200h_4e"
+                            alt="" name="ssdsn_search_maijiajx_pic01"><span><i>¥</i>556<i>.00</i></span></a><a
+                        href="https://th.suning.com/calCpcClicks?adtype=1&amp;tid=2871404997&amp;cmdCode=10602669923&amp;companyCode=70142956&amp;s=&amp;k=sB%2fY8hesc2DtZqHVvJA8f%2bBs%2fk%2bi38gEt3BMFp%2f1seJ6Tf7NxgENlcgwVxk6vGA%2br0pVEnxjNiRU0iBH5wp6kZBFb3JZeftdEpAHwnksF%2fhDKFpsfPaNuMEhk0F2bAHNMc%2bJJnhkHIC%2f4tZF7LXJugEOrD4rOEftoz8b2zlJc66%2f7cFAeCvJKhPqQMjfcTOwhoq8ClfjYyWD14fgquRET1eB1DALQR8m0%2f4sIyABEJNMTPVgPTc%2bBESch21NkMfKgFDiCWGS4Rd2XIBzP2wr933TZSwzfFSp2%2fadr4HxR0Jfq%2bkdmN0QPhm3vIUirBju%2fVzqf8CepZV6YnwzCooBqSS2%2fViFewyKJAW6YUU6ToVJ7k835XXdDH%2fORkSQFNyn0fZvlEzk%2bswvNVRhDcXTtYX3v3dHaAQoE0soL%2b3ETE%2b8Pd28pHHYQpqOyy26yAFKEPJv94ABcDmG9U6if8TsUTGoWzbHGl8%2fDosfVz7GFhgrXyuPqG3KVu7URJQwYVJt&amp;clickUrl=http%3a%2f%2fproduct.suning.com%2f0070142956%2f10602669923.html&amp;click_id=JPbtKM20aY8mBmBP20000000000pb7K83"
+                        target="_blank" class="goods"
+                        sa-data="{'eletp':'prd','prdid':'10602669923','salestatus':'1','shopid':'0070142956'}"
+                        id="40016212"><img
+                            src="//imgservice.suning.cn/uimg1/b2c/image/YW-Di_PBjP5XmeHUwJLpDA.jpg_200w_200h_4e"
+                            alt="" name="ssdsn_search_maijiajx_pic01"><span><i>¥</i>996<i>.00</i></span></a><a
+                        href="https://th.suning.com/calCpcClicks?adtype=1&amp;tid=2875478363&amp;cmdCode=11197581115&amp;companyCode=70142956&amp;s=&amp;k=sB%2fY8hesc2DtZqHVvJA8f9HKILSZBrJgVW6R7f4VYIGHpJL2e6kzFPTcc7T%2bjHalSVzCFdpdOA6u2j6jmQiwPPR2ccpZN0rCtNG8YsLlzr%2bDwG%2fQSxbgUb17%2f4rESKAryh41YgDVIC9%2fR%2fgU9uoeaYxo3wnPwOBdle883dvpockde3d9HuCjj6o40cO0cuALsdP09QTrq5Q7SpipVIn8p4ipqODTkWA4%2bBhwburxZnWLkio8aONv650l0%2fB4w1MrtuOYLLlQtxte7cHhX2z4UhK6XDG%2b3c4TUV2Kn0NmDqtP53K9RK2D9WkRluJJFS9J3FFAjqHhFzsWY8TSsXhb%2ftAUf4txfCwhn7uW7ZxcvFzHqcvmU9TSvKXduQEreSxbaoO7lt7O9lQidrZxiaapR20zZmMpAEycKduK9T%2f6X8LU3I2UrFdmkCVP%2bFRjlcWe6T2hm9WoaIqe2h2VGFXCjj1AjfGuSQzBAM9Z7bHFB%2bdv%2fX7uIs204gy0HUIznTLm&amp;clickUrl=http%3a%2f%2fproduct.suning.com%2f0070142956%2f11197581115.html&amp;click_id=JPbtKN20aY8mBnG720000000000HHDb83"
+                        target="_blank" class="goods"
+                        sa-data="{'eletp':'prd','prdid':'11197581115','salestatus':'1','shopid':'0070142956'}"
+                        id="40016212"><img
+                            src="//imgservice.suning.cn/uimg1/b2c/image/jnY2iM_euq1h1TFwnZDNUA.jpg_200w_200h_4e"
+                            alt="" name="ssdsn_search_maijiajx_pic01"><span><i>¥</i>2776<i>.00</i></span></a><a
+                        href="https://th.suning.com/calCpcClicks?adtype=1&amp;tid=2875488819&amp;cmdCode=10719132422&amp;companyCode=70142956&amp;s=&amp;k=sB%2fY8hesc2DtZqHVvJA8fzMe5eGe8e%2b98%2bJm8FbG1YUWRI3ABPsBqX4z2M2tsujBW87xKoJBePIlElS8nbNUsUa2ev2VVupherIImanKxt8sXLPwRMBDV%2fpIPalvz3Q%2bpiGCAgcR%2fKEMme41zlKa%2fIW2SjT3dis6vvjD2GJjvc5mRKE%2b58u6TqiGGGHSwzA%2fvWPh16uvEOmpxOlr7MalWmLd71bsHY2hTaf000YOgrDYFbVz6a5MdOxbdv03Z5Zt2MpepnyZYQiLbD1ibWQSWtMzGCU0T46B0ejrz%2byFdT%2b3A4hvOzErtJuc%2fX6iAdiFUFlXnr%2fLhn%2bTOqM%2b9Vi6Emp8077VdJe1g%2flMI59aHRrG%2bFy0dZtaDXj9Ipl0wIZYOhlCgx2fcbVLKk1EQsIH10nqXFl9eVbWWbiMExd4F3C8MCBOGOwojl3mJ8aLEc1mWjumuWTo3ImuVXBafZexYJ%2bUFfiHjjm2QuhKUek25hcXTh55IfUukxgiB5p6elu1&amp;clickUrl=http%3a%2f%2fproduct.suning.com%2f0070142956%2f10719132422.html&amp;click_id=JPbtKN20aY8mBn6920000000000vzFb83"
+                        target="_blank" class="goods"
+                        sa-data="{'eletp':'prd','prdid':'10719132422','salestatus':'1','shopid':'0070142956'}"
+                        id="40016212"><img
+                            src="//imgservice.suning.cn/uimg1/b2c/image/I21xM_C09V-9efiHBJcgKg.jpg_200w_200h_4e"
+                            alt="" name="ssdsn_search_maijiajx_pic01"><span><i>¥</i>938<i>.00</i></span></a><em
+                        class="ad-label-tips">广告</em></div>
+                <div class="about_finalBuy" style="display: none;"><a
+                        href="//product.suning.com/0000000000/11373121486.html?f=t&amp;src=ssdln_20006_recsszggmn_1-1_p_0000000000_11373121486_rec_2-1_0_A"
+                        target="_blank" class="goods"
+                        sa-data="{'eletp':'prd','prdid':'11373121486','shopid':'0000000000','recvalue':'rec_2-1_0_A','salestatus':'1'}"
+                        id="000000011373121486"><img
+                            src="//imgservice.suning.cn/uimg1/b2c/image/Qn7b9Gmyw-MJigi8TinMjw.jpg_200w_200h_4e"
+                            alt=""
+                            name="ssdln_20006_recsszggmn_1-1_p_0000000000_11373121486_rec_2-1_0_A"><span><i>¥</i>4299<i>.00</i></span></a><a
+                        href="//product.suning.com/0070094634/11346320884.html?f=t&amp;src=ssdln_20006_recsszggmn_1-1_p_0070094634_11346320884_rec_2-1_0_A"
+                        target="_blank" class="goods"
+                        sa-data="{'eletp':'prd','prdid':'11346320884','shopid':'0070094634','recvalue':'rec_2-1_0_A','salestatus':'1'}"
+                        id="000000011346320884"><img
+                            src="//imgservice.suning.cn/uimg1/b2c/image/tetrHXBySev5-Is1e7YUkA.jpg_200w_200h_4e"
+                            alt=""
+                            name="ssdln_20006_recsszggmn_1-1_p_0070094634_11346320884_rec_2-1_0_A"><span><i>¥</i>6228<i>.00</i></span></a><a
+                        href="//product.suning.com/0000000000/10597918588.html?f=t&amp;src=ssdln_20006_recsszggmn_1-1_p_0000000000_10597918588_rec_2-1_0_A"
+                        target="_blank" class="goods"
+                        sa-data="{'eletp':'prd','prdid':'10597918588','shopid':'0000000000','recvalue':'rec_2-1_0_A','salestatus':'1'}"
+                        id="000000010597918588"><img
+                            src="//imgservice.suning.cn/uimg1/b2c/image/4zCnk7gqurdkOOyqkpCE7w.jpg_200w_200h_4e"
+                            alt=""
+                            name="ssdln_20006_recsszggmn_1-1_p_0000000000_10597918588_rec_2-1_0_A"><span><i>¥</i>5038<i>.00</i></span></a><a
+                        href="//product.suning.com/0000000000/11373121486.html?f=t&amp;src=ssdln_20006_recsszggmn_1-1_p_0000000000_11373121486_rec_2-1_0_A"
+                        target="_blank" class="goods"
+                        sa-data="{'eletp':'prd','prdid':'11373121486','shopid':'0000000000','recvalue':'rec_2-1_0_A','salestatus':'1'}"
+                        id="000000011373121486"><img
+                            src="//imgservice.suning.cn/uimg1/b2c/image/Qn7b9Gmyw-MJigi8TinMjw.jpg_200w_200h_4e"
+                            alt=""
+                            name="ssdln_20006_recsszggmn_1-1_p_0000000000_11373121486_rec_2-1_0_A"><span><i>¥</i>4299<i>.00</i></span></a><a
+                        href="//product.suning.com/0000000000/11346304303.html?f=t&amp;src=ssdln_20006_recsszggmn_1-1_p_0000000000_11346304303_rec_2-1_0_A"
+                        target="_blank" class="goods"
+                        sa-data="{'eletp':'prd','prdid':'11346304303','shopid':'0000000000','recvalue':'rec_2-1_0_A','salestatus':'1'}"
+                        id="000000011346304303"><img
+                            src="//imgservice.suning.cn/uimg1/b2c/image/nZlILplfEH_yG4IyIzNZkQ.jpg_200w_200h_4e"
+                            alt=""
+                            name="ssdln_20006_recsszggmn_1-1_p_0000000000_11346304303_rec_2-1_0_A"><span><i>¥</i>9999<i>.00</i></span></a><a
+                        href="//product.suning.com/0070094634/11346320884.html?f=t&amp;src=ssdln_20006_recsszggmn_1-1_p_0070094634_11346320884_rec_2-1_0_A"
+                        target="_blank" class="goods"
+                        sa-data="{'eletp':'prd','prdid':'11346320884','shopid':'0070094634','recvalue':'rec_2-1_0_A','salestatus':'1'}"
+                        id="000000011346320884"><img
+                            src="//imgservice.suning.cn/uimg1/b2c/image/tetrHXBySev5-Is1e7YUkA.jpg_200w_200h_4e"
+                            alt=""
+                            name="ssdln_20006_recsszggmn_1-1_p_0070094634_11346320884_rec_2-1_0_A"><span><i>¥</i>6228<i>.00</i></span></a><a
+                        href="//product.suning.com/0000000000/10597918588.html?f=t&amp;src=ssdln_20006_recsszggmn_1-1_p_0000000000_10597918588_rec_2-1_0_A"
+                        target="_blank" class="goods"
+                        sa-data="{'eletp':'prd','prdid':'10597918588','shopid':'0000000000','recvalue':'rec_2-1_0_A','salestatus':'1'}"
+                        id="000000010597918588"><img
+                            src="//imgservice.suning.cn/uimg1/b2c/image/4zCnk7gqurdkOOyqkpCE7w.jpg_200w_200h_4e"
+                            alt=""
+                            name="ssdln_20006_recsszggmn_1-1_p_0000000000_10597918588_rec_2-1_0_A"><span><i>¥</i>5038<i>.00</i></span></a><a
+                        href="//product.suning.com/0070094634/11346304317.html?f=t&amp;src=ssdln_20006_recsszggmn_1-1_p_0070094634_11346304317_rec_2-1_0_A"
+                        target="_blank" class="goods"
+                        sa-data="{'eletp':'prd','prdid':'11346304317','shopid':'0070094634','recvalue':'rec_2-1_0_A','salestatus':'1'}"
+                        id="000000011346304317"><img
+                            src="//imgservice.suning.cn/uimg1/b2c/image/YoDDto_YFpCFzN7AFm5fcw.jpg_200w_200h_4e"
+                            alt=""
+                            name="ssdln_20006_recsszggmn_1-1_p_0070094634_11346304317_rec_2-1_0_A"><span><i>¥</i>9828<i>.00</i></span></a><a
+                        href="//product.suning.com/0000000000/11373121541.html?f=t&amp;src=ssdln_20006_recsszggmn_1-1_p_0000000000_11373121541_rec_2-1_0_A"
+                        target="_blank" class="goods"
+                        sa-data="{'eletp':'prd','prdid':'11373121541','shopid':'0000000000','recvalue':'rec_2-1_0_A','salestatus':'1'}"
+                        id="000000011373121541"><img
+                            src="//imgservice.suning.cn/uimg1/b2c/image/TXM17uJEqfo4-iNyUNYDpQ.jpg_200w_200h_4e"
+                            alt=""
+                            name="ssdln_20006_recsszggmn_1-1_p_0000000000_11373121541_rec_2-1_0_A"><span><i>¥</i>5799<i>.00</i></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="foot"></div>
+
+    <footer></footer>
+</body>
+
+</html>
