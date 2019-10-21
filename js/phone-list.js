@@ -24,24 +24,45 @@ $(() => {
     /* type ==0 默认排序  id */
     /* type ==1 升序排列  价格 */
     /* type ==2 降序排列  价格 */
+    // function getDataWithPage(page, type) {
+    //     $.ajax({
+    //         type: "get",
+    //         url: "../server/getGoodsData.php",
+    //         data: `page=${page}&sortType=${type}`,
+    //         dataType: "json",
+    //         success: (data) => renderUI(data)
+    //     });
+    // }
+
     function getDataWithPage(page, type) {
         $.ajax({
             type: "get",
             url: "../server/getGoodsData.php",
-            data: `page=${page}&sortType=${type}`,
+            data: `page=${page}&sortType=0`,
             dataType: "json",
-            success: (data) => renderUI(data)
+            success: (data) => {
+                renderUI(data,type)
+            }
         });
     }
 
-    function renderUI(data) {
-        console.log(data);
+    function renderUI(data,type) {
+        if(type==2){
+            data.sort(function(a,b){
+                return a.price-b.price;
+            })
+        }
+        else if(type==1){
+            data.sort(function(a,b){
+                return b.price-a.price;
+            })
+        }
                                                         // <div class="title ">${ele.title.substr(0,50)}</div>
         let html = data.map((ele) => {
             return `
                 <li class="item">
                     <div class="item-box">
-                        <img src=${ele.src}>
+                        <a href="http://127.0.0.1/1910/suning/src/html/details-page.html"><img src=${ele.src}></a>
                         <div class="price "><i class="price-icon">￥</i> ${ele.price}<i class="price-icon">.00</i></div>
                         <div class="title ">${ele.title}</div>
                         <div class="dis ">${ele.disCount}</div>
@@ -59,6 +80,12 @@ $(() => {
             `
         }).join("");
         $(".box-list").html(html);
+
+        $(".item").click(() => {
+            location.href= "http://127.0.0.1/1910/suning/src/html/details-page.html";
+            
+        })
+
     }
 
     /* 先给页面添加点击事件，当点击的时候获取页码值，根据该值发送网络请求 */
@@ -70,7 +97,9 @@ $(() => {
 
     /* 处理排序 */
     $(".typeBtn").click(function () {
-        getDataWithPage(1, $(this).index());
+        let page=$(".page .active").text();
+        
+        getDataWithPage(page, $(this).index());
     })
 
 
@@ -80,6 +109,12 @@ $(() => {
     $("footer").load("../template/footer-part2.html",function(){
         console.log(1111);
     })
+    $("header").load("../html/index-header.html")
+
+
+
+
+
 })
 
 

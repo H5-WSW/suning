@@ -9,14 +9,18 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/index-body.css">
     <link rel="stylesheet" href="../css/hearder.css">
+    <link rel="stylesheet" href="../css/floor-jump.css">
+    <link rel="stylesheet" href="../css/right-nav.css">
     <script src="../js/jquery-3.4.1.js"></script>
     <script src="../js/lb.js"></script>
     <script src="../js/index-body.js"></script>
+    <script src="../js/hearder.js"></script>
     <script src="../js/index-Nav.js"></script>
+    <!-- <script src="../js/floor-jump.js"></script> -->
 </head>
 
 <body>
-    <header></header>
+    <header id="index-top"></header>
     <div class="index-part-warp">
 
         <!-- 三级导航栏 -->
@@ -83,19 +87,19 @@
             </div>
             <div id="content-sfq">
                 <dl>
-                    <dt style="background: #303">极物洗护</dt>
+                    <dt>极物洗护</dt>
                     <dd style="width: 575px"><img src="../images/sfq/sfq1.png" width="295" height="165"></dd>
                 </dl>
                 <dl>
-                    <dt style="background: #F0F">汽车用品</dt>
+                    <dt>汽车用品</dt>
                     <dd><img src="../images/sfq/sfq2.png" width="295" height="165"></dd>
                 </dl>
                 <dl>
-                    <dt style="background: #903">电视家影</dt>
-                    <dd s><img src="../images/sfq/sfq3.png" width="295" height="165"></dd>
+                    <dt>电视家影</dt>
+                    <dd><img src="../images/sfq/sfq3.png" width="295" height="165"></dd>
                 </dl>
                 <dl>
-                    <dt style="background: #F00">冰箱洗衣机</dt>
+                    <dt>冰箱洗衣机</dt>
                     <dd><img src="../images/sfq/sfq4.png" width="295" height="165"></dd>
                 </dl>
             </div>
@@ -459,7 +463,7 @@
 
         <!-- 复用部分 -->
         <!-- 1楼 -->
-        <div class="index-repeatPart">
+        <div class="index-repeatPart" id="floor1">
             <div class="repeat-l repeatPart">
                 <div class="repeat-title">
                     <span class="titleLine"></span>
@@ -495,7 +499,7 @@
             <a href="#"><img src="//image4.suning.cn/uimg/cms/img/157131062770226384.jpg" alt=""></a>
         </div>
         <!-- 2楼 -->
-        <div dir="repeatPart-special" class="index-repeatPart">
+        <div dir="repeatPart-special" class="index-repeatPart"  id="floor2">
             <div class="repeat-l repeatPart">
                 <div class="repeat-title">
                     <span class="titleLine"></span>
@@ -526,7 +530,7 @@
             <a href="#"><img src="//image.suning.cn/uimg/aps/material/153715170684643723.jpg" alt=""></a>
         </div>
         <!-- 3楼 -->
-        <div class="index-repeatPart">
+        <div class="index-repeatPart"  id="floor3">
             <div class="repeat-l repeatPart">
                 <div class="repeat-title">
                     <span class="titleLine"></span>
@@ -558,7 +562,7 @@
             </div>
         </div>
         <!-- 4楼 -->
-        <div class="index-repeatPart">
+        <div class="index-repeatPart"  id="floor4">
             <div class="repeat-l repeatPart">
                 <div class="repeat-title">
                     <span class="titleLine"></span>
@@ -588,7 +592,7 @@
             </div>
         </div>
         <!-- 5楼 +++-->
-        <div class="index-repeatPart">
+        <div class="index-repeatPart"  id="floor5">
             <div class="repeat-l repeatPart">
                 <div class="repeat-title">
                     <span class="titleLine"></span>
@@ -620,7 +624,7 @@
             </div>
         </div>
         <!-- 6楼 -->
-        <div class="index-repeatPart">
+        <div class="index-repeatPart"  id="floor6">
             <div class="repeat-l repeatPart">
                 <div class="repeat-title">
                     <span class="titleLine"></span>
@@ -651,7 +655,7 @@
             </div>
         </div>
         <!-- 7楼 -->
-        <div class="index-repeatPart">
+        <div class="index-repeatPart"  id="floor7">
             <div class="repeat-l repeatPart">
                 <div class="repeat-title">
                     <span class="titleLine"></span>
@@ -682,7 +686,7 @@
             </div>
         </div>
         <!-- 8楼 -->
-        <div class="index-repeatPart">
+        <div class="index-repeatPart"  id="floor8">
             <div class="repeat-l repeatPart">
                 <div class="repeat-title">
                     <span class="titleLine"></span>
@@ -715,7 +719,7 @@
         </div>
 
         <!-- 9-猜你喜欢 -->
-        <div class="index-partLast-like">
+        <div class="index-partLast-like"  id="floor9">
             <div class="partLast-like-title">
                 <span class="line"></span>
                 <h3>猜你喜欢</h3>
@@ -739,6 +743,8 @@
             </div>
         </div>
     </div>
+    <div class="floor-jump"></div>
+    <div class="index-right-nav"></div>
     <div class="footer1"></div>
     <div class="footer2"></div>
 </body>

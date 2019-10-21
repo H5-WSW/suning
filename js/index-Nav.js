@@ -58,7 +58,7 @@ $(() => {
                 url: "../server/getThereNavData2.php",
                 success(data1) {
                     var data1 = JSON.parse(data1);
-                    console.log(data1);
+                    //console.log(data1);
                     let res = "";
                     for (let j = 0; j < data1.length; j++) {
                         res += ` 
@@ -68,7 +68,7 @@ $(() => {
                         </div>
                         `
                     }
-                    console.log(res);                 //奇数循环添加
+                    //console.log(res);                 //奇数循环添加
                     for (let k = 0; k < 15; k++) {
                         if (k % 2 != 0) {
                             document.querySelectorAll(".ThereNav")[k].innerHTML += res;

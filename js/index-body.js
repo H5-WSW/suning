@@ -70,7 +70,7 @@ $(() => {
                     bottomData: this.bottomData
                 }
             }
-            console.log(data);
+            
             $.ajax({
                 type: "post",
                 url: "..//server//getRepeatData.php",
@@ -208,14 +208,22 @@ $(() => {
     // 手风琴
     $("#content-sfq dt").eq(0).hide();
     $("#content-sfq dt").mouseover(function () {
-        //$("#content-sfq dt").show();
-        //$(this).hide();
+        $("#content-sfq dt").show();
+        $(this).hide();
         //$(this).siblings("dd").css("width",500)
         //$(this).siblings("dd").children("img").css("width",500);
-        $("#content-sfq dd").animate({"width":0},{"queue":false});
-       $(this).next().animate({"width": 570},{"queue":false});      //    返回当前元素dt的后一个同级元素dd
-    //    console.log($(this).next());
-    
+        $("#content-sfq dd").animate({
+            "width": 0
+        }, {
+            "queue": false
+        });
+        $(this).next().animate({
+            "width": 570
+        }, {
+            "queue": false
+        }); //    返回当前元素dt的后一个同级元素dd
+        //    console.log($(this).next());
+
     });
 
     // 限时抢购
@@ -243,7 +251,7 @@ $(() => {
             // 箭头的点击事件
             $(".btn-l").click(() => {
                 console.log($(".timeLimit-l-list")[0].offsetLeft);
-                
+
                 if (-$(".timeLimit-l-list")[0].offsetLeft < 2000) {
                     $(".timeLimit-l-list")[0].style.left = $(".timeLimit-l-list")[0].offsetLeft - 790 + "px";
                 }
@@ -255,8 +263,87 @@ $(() => {
             })
         }
     })
-    $("header").load("../html/index-header.html")
+    $("header").load("../html/index-header.html",function(){
+        $("#adv-close").click(function() {
+            /* 获取当前标签的父标签关闭 */
+            
+            $(this).parent().slideUp(1000);
+            // $(".topNav-adv").slideUp(1000);
+        })
+    })
     $(".footer1").load("../html/footer-part1.html")
     $(".footer2").load("../html/footer-part2.html")
+    $(".index-right-nav").load("../html/right-nav.html")
+    $(".floor-jump").load("../html/floor-jump.html", function() {
+        
+
+        // 楼层跳跃
+        let AllFloorJumpDiv = document.querySelectorAll(".floorJump-listBox");
+        let AllFloorJumpList = document.querySelectorAll(".floorJump-list");
+        /* 2-遍历便签，添加点击事件 */
+        let timer;
+        let gotoWd;
+        console.log(AllFloorJumpList,"============");
+        
+        for (let k = 0; k < AllFloorJumpList.length; k++) {
+            AllFloorJumpList[k].index = k;
+            AllFloorJumpList[k].onclick = function () {
+                /* 当标签被点击，获取当前的便签 */
+                //self = this;
+                // console.log("当前索引=" + AllFloorJumpList[k].index);
+
+                /* 用定时器实现滑动效果，每次加减40px */
+                /* 为了防止定时器的叠加*/
+                // clearInterval(timer);
+                // timer = setInterval(function () {
+                //     /* 做特殊处理，当出现特殊的窗口值（不是整数时）转换为整数 */
+                //     gotoWd = Math.floor(window.scrollY / 45) * 45;
+                //     if (gotoWd > self.index * 450) {
+                //         gotoWd -= 45;
+                //     } else
+                //     if (gotoWd < self.index * 450) {
+                //         gotoWd += 45;
+                //     }
+                //     /* 当跳转到指定位置的时候要清除定时器（否则会一直进行加或减） */
+                //     if (gotoWd == self.index * 450) {
+                //         window.scrollTo(0, gotoWd);
+                //         clearInterval(timer);
+                //     }
+                //     /* 每5ms在当前基础上跳转40px */
+                //     window.scrollTo(0, gotoWd);
+                // }, 5);
+                // window.scrollTo(0,3000);
+     
+                for (let j = 0; j < AllFloorJumpList.length; j++) {
+                    AllFloorJumpList[j].style.background = "#f8f8f8";
+                }
+                AllFloorJumpList[k].style.background = "#f90";
+
+            };
+        }
+        // document.onscroll=function(){
+        //     console.log(11111111111);
+            
+        //     console.log(window.scrollY);
+            
+        // }
+        //默认选中第一楼
+        AllFloorJumpList[0].style.background = "#f90";
+        /* 窗口滑动事件，当出现滑动时，判断当前的滚动条的Y值 */
+        // onscroll = function () {
+        //     /* 排他 */
+        //     for (let j = 0; j < AllFloorJumpList.length; j++) {
+        //         AllFloorJumpList[j].style.background = "#f8f8f8";
+        //     }
+        //     console.log((window.scrollY - 2628) / 714);
+            
+        //     let i = Math.floor((window.scrollY - 2628) / 715);
+        //     i<0?i=0:i;
+        //     AllFloorJumpList[i].style.background = "#f90";
+        // }
+    })
+
+
+
 
 })

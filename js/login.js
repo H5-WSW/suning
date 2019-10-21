@@ -39,7 +39,7 @@ $(() => {
                     /* 跳转到首页 */
                      console.log("11111111111");
                      
-                    window.location.href = "https://www.baidu.com/";
+                    window.location.href = "http://127.0.0.1/1910/suning/src/html/1index-body.html";
                 } else {
                     /* 注册失败： */
                     alert(response.msg);
@@ -50,4 +50,5 @@ $(() => {
         });
 
     })
+    $(".footer2").load("../html/footer-part2.html")
 })

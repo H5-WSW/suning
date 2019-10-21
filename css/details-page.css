@@ -370,10 +370,10 @@ html * {
 .details-left {
     position: relative;
     float: left;
-    width: 451px;
+    width: 448px;
     height: 540px;
-    /* border: 4px solid #ffbc35; */
-    background: slateblue;
+    border: 1px solid #e7e6e4;
+    /* background: slateblue; */
 }
 
 .mglass-box {
@@ -414,6 +414,10 @@ html * {
     height: 80px;
     float: left;
 }
+.details-list ul{
+    border: 1px solid #e7e6e4;
+}
+
 .details-list ul li {
     width: 100%;
     height: 80px;
@@ -516,7 +520,7 @@ html * {
     padding: 10px 0 8px;
     border: solid #eee;
     border-width: 1px 0;
-    background: lightblue;
+    /* background: lightblue; */
 }
 
 #priceDom .title {

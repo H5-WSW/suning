@@ -19,7 +19,7 @@ body {
 }
 
 /* 导航栏 */
-nav{
+nav {
     padding-top: 30px;
     width: 1190px;
     height: 38px;
@@ -230,7 +230,7 @@ h4,
     padding: 0;
     list-style-type: none;
     border: 0;
-    top:0;
+    top: 0;
 }
 
 .index-lb img {
@@ -239,7 +239,7 @@ h4,
 
 .index-lb .dotbox {
     position: absolute;
-    top:320px;
+    top: 340px;
     /* bottom: 10px; */
     left: 50%;
     transform: translateX(-50%);
@@ -251,9 +251,9 @@ h4,
 }
 
 .index-lb .dotbox span {
-    width: 21px;
-    height: 21px;
-    line-height: 21px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
     border-radius: 50%;
     background: #fff;
     margin-right: 10px;
@@ -265,6 +265,7 @@ h4,
     position: relative;
     cursor: pointer;
 }
+
 /* 左箭头 */
 .index-lb .leftbtn {
     position: absolute;
@@ -276,7 +277,7 @@ h4,
     text-align: center;
     font-size: 26px;
     background: rgba(80, 80, 80, 0.2);
-    color:#444;
+    color: #444;
     transform: translateY(-50%);
     cursor: pointer;
     user-select: none;
@@ -284,6 +285,7 @@ h4,
     -moz-user-select: none;
     -ms-user-select: none;
 }
+
 /* 右箭头 */
 .index-lb .rightbtn {
     position: absolute;
@@ -295,7 +297,7 @@ h4,
     text-align: center;
     font-size: 26px;
     background: rgba(80, 80, 80, 0.2);
-    color:#444;
+    color: #444;
     transform: translateY(-50%);
     cursor: pointer;
     user-select: none;
@@ -305,7 +307,7 @@ h4,
 }
 
 .index-lb .active {
-    background: #65657E!important;
+    background: #65657E !important;
     color: white !important;
     opacity: 0.5;
 }
@@ -419,29 +421,52 @@ h4,
 }
 
 /* 手风琴 */
-#content-sfq{
+#content-sfq {
     position: absolute;
     left: 387px;
     bottom: 0;
     width: 816px;
     margin: 0 10px 10px;
 }
-#content-sfq dt{
+
+#content-sfq dt {
     width: 78px;
-    height: 96px;
+    height: 106px;
     color: #fff;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: bold;
     text-align: center;
-    padding-top: 10px;
     float: left;
     cursor: pointer;
+    box-sizing: border-box;
+    padding: 10px 27px 0;
+    background-image:linear-gradient(to right,#eee 4%,#fff 40%);
 }
-#content-sfq dd{
+#content-sfq dl:nth-of-type(1) dt {
+   color: pink;
+}
+#content-sfq dl:nth-of-type(2) dt{
+    color: #a65cf0;
+ }
+ #content-sfq dl:nth-of-type(3) dt{
+    color: #2fbc35;
+ }
+ #content-sfq dl:nth-of-type(4) dt{
+    color: #64acf7;
+ }
+
+
+
+
+
+
+#content-sfq dd {
     width: 0px;
     float: left;
     overflow: hidden;
 }
-#content-sfq dd img{
+
+#content-sfq dd img {
     width: 600px;
 }
 
@@ -646,8 +671,9 @@ h4,
     background: rgba(100, 100, 100, 0.3);
     z-index: 100;
 }
+
 /* 限时-右（大聚惠） */
-.timeLimit-r{
+.timeLimit-r {
     width: 370px;
     float: left;
     margin-left: 10px;
@@ -655,7 +681,8 @@ h4,
     padding-top: 0px;
     background: #fff;
 }
-.timeLimit-r-title{
+
+.timeLimit-r-title {
     width: 370px;
     height: 46px;
     color: #666666;
@@ -664,14 +691,16 @@ h4,
     font-weight: bold;
     border-bottom: 1px solid #999999;
 }
-.timeLimit-r-mian .bigImg{
+
+.timeLimit-r-mian .bigImg {
     padding: 10px 0;
     width: 320px;
     height: 153px;
     margin: 0 auto;
     cursor: pointer;
 }
-.timeLimit-r-mian .smalllogo{
+
+.timeLimit-r-mian .smalllogo {
     float: left;
     width: 111px;
     height: 78px;
@@ -681,7 +710,8 @@ h4,
     border-radius: 4px;
     margin-right: 10px;
 }
-.timeLimit-r-mian .smalllogo img{
+
+.timeLimit-r-mian .smalllogo img {
     width: 85px;
     height: 41px;
     margin: 0 9px 3px;
@@ -985,7 +1015,8 @@ h4,
 .content-four .img-infor:hover div {
     top: -105px;
 }
-.content-spe .img-infor:hover div{
+
+.content-spe .img-infor:hover div {
     top: 0;
 }
 
@@ -1358,11 +1389,13 @@ h4,
     height: 120px;
     margin: 0 auto;
 }
+
 /* 放大图 */
 .repeatPart .list-right img:hover {
     transform: scale(1.04);
     transition: 0.5s;
 }
+
 /* des */
 .repeatPart .des {
     font-size: 12px;
@@ -1467,7 +1500,7 @@ h4,
     /* background: no-repeat; */
 }
 
-.partLast-like-list ul::after{
+.partLast-like-list ul::after {
     content: ".";
     display: block;
     height: 0;

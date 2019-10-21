@@ -75,7 +75,7 @@
                 // 自动播放(根据索引按顺序循环显示图，加样式让其显示)
                 this.timer = setInterval(() => {
                     $(".index-lb-warp").css("background",this.col[this.index]);
-                    console.log($(".index-lb-warp"));
+                    //console.log($(".index-lb-warp"));
                     /* 排它，清除 */
                     this.clear();
                     imgs[this.index].className = "cur";
