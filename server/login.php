@@ -24,9 +24,6 @@ if (mysqli_num_rows($result) == 0)            #   mysqli_num_rows(参数result) 
   $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
   $data = $data[0];
   // print_r($data["password"]);
-
-
-
   if($data["password"] != $password)
   {
     $response["status"] = "error";

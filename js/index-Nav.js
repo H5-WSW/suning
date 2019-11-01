@@ -1,7 +1,7 @@
 $(() => {
     $.ajax({
         type: "post",
-        url: "../server/getTowNavData.php",
+        url: "/server/getTowNavData.php",
         success(data) {
             var data = JSON.parse(data); //把字符串转换为数组
             // console.log("1111111111111",data);

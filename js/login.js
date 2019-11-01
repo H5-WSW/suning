@@ -30,7 +30,7 @@ $(() => {
         // console.log("------",$(usernameVal).text(),$(passwordVal).text());
         $.ajax({
             type: "post",
-            url: "../server/login.php",
+            url: "/login",
             data: `username=${usernameVal}&password=${passwordVal}`,
             dataType: "json",
             success: function (response) {
