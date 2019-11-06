@@ -104,7 +104,7 @@ $(() => {
         /* 发请求给服务器  注册： */
         $.ajax({
             type: "post",
-            url: "../server/register.php",
+            url: "/register",
             data: `username=${$("#phoneID").val()}&password=${$("#password").val()}&phone=${$("#phoneID").val()}`,
             dataType: "json",
             success: function(response) {

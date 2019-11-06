@@ -1,7 +1,7 @@
 $(() => {
     $.ajax({
-        type: "post",
-        url: "/server/getTowNavData.php",
+        type: "get",
+        url: "/getTowNavData",
         success(data) {
             var data = JSON.parse(data); //把字符串转换为数组
             // console.log("1111111111111",data);
@@ -29,8 +29,8 @@ $(() => {
             Oul.innerHTML = html;
             // 三级Nav数据1---div的内容一
             $.ajax({
-                type: "post",
-                url: "../server/getThereNavData1.php",
+                type: "get",
+                url: "/getThereNavData1",
                 success(data1) {
                     var data1 = JSON.parse(data1);
                     console.log(data1);
@@ -54,8 +54,8 @@ $(() => {
             })
             // 三级数据2---div的内容二
             $.ajax({
-                type: "post",
-                url: "../server/getThereNavData2.php",
+                type: "get",
+                url: "/getThereNavData2",
                 success(data1) {
                     var data1 = JSON.parse(data1);
                     //console.log(data1);

@@ -29,7 +29,7 @@ $(() => {
         
         // console.log("------",$(usernameVal).text(),$(passwordVal).text());
         $.ajax({
-            type: "post",
+            type: "get",
             url: "/login",
             data: `username=${usernameVal}&password=${passwordVal}`,
             dataType: "json",

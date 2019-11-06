@@ -3,7 +3,7 @@ $(() => {
     new Promise(function (resolve, reject) {
         $.ajax({
             type: "get",
-            url: "../server/getPageCount.php",
+            url: "/getPageCount",
             dataType: "json",
             success: (data) => {
                 let res = "";
@@ -37,7 +37,7 @@ $(() => {
     function getDataWithPage(page, type) {
         $.ajax({
             type: "get",
-            url: "../server/getGoodsData.php",
+            url: "/getgoodsdata",
             data: `page=${page}&sortType=0`,
             dataType: "json",
             success: (data) => {

@@ -2,7 +2,7 @@ $(() => {
     new Promise(function (resole, reject) {        //?
         $.ajax({
             type: "get",
-            url: "../server/getShopList.php",
+            url: "/getShopList",
             success: (data) => {
                 let index = 0;
                 // console.log(index);

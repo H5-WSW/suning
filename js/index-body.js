@@ -1,7 +1,7 @@
 $(() => {
     $.ajax({ //猜你喜欢
-        type: "post",
-        url: "../server//getLikeDate.php",
+        type: "get",
+        url: "/getLikeDate",    //
         //dataType: "json",
         success(data) {
             var data = JSON.parse(data).splice(0, 25); //转换成字符串,截取前25条数据
@@ -72,8 +72,8 @@ $(() => {
             }
             
             $.ajax({
-                type: "post",
-                url: "..//server//getRepeatData.php",
+                type: "get",
+                url: "/getRepeatData",    //
                 data: data,
                 success(res) {
                     var res = JSON.parse(res);
@@ -228,8 +228,8 @@ $(() => {
 
     // 限时抢购
     $.ajax({
-        type: "post",
-        url: "../server/getTimeLimit.php",
+        type: "get",
+        url: "/getTimeLimit",   //
         success(limitdata) {
             let Oul = document.createElement("ul");
             let html = "";
